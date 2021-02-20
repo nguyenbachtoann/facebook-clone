@@ -1,0 +1,48 @@
+@import "./variables";
+
+@mixin option-btn-png($imgUrl, $bgX, $bgY, $bgW, $bgH, $size: 20px) {
+  background-image: url($imgUrl);
+  background-position: $bgX $bgY;
+  background-size: $bgW $bgH;
+  background-repeat: no-repeat;
+  display: inline-block;
+  width: $size;
+  height: $size;
+}
+
+@mixin width-heigh($w, $h) {
+  width: $w;
+  height: $h;
+}
+@mixin width-heigh-100 {
+  width: 100%;
+  height: 100%;
+}
+
+@mixin center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin flex-position($justify: center, $align: center) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+// base on $icon-secondary-filter-color: #606770;
+@mixin secondary-icon-filter {
+  filter: invert(38%) sepia(18%) saturate(249%) hue-rotate(174deg)
+    brightness(96%) contrast(86%);
+}

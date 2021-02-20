@@ -1,0 +1,186 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
+@mixin hover-background-color-border {
+  @include center;
+  @include width-heigh-100;
+  border-radius: 10px;
+  &:hover {
+    cursor: pointer;
+    background-color: $btn-secondary-hover-bg-color;
+  }
+}
+
+@mixin right-buttons {
+  @include width-heigh(40px, 40px);
+  @include center;
+  border-radius: 50%;
+  background-color: $btn-secondary-bg-color;
+  margin-left: 8px;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+@mixin mid-btn-active-de-active {
+  &--active {
+    @include center;
+    @include width-heigh-100;
+  }
+  &--de-active {
+    @include hover-background-color-border;
+    &:active {
+      background-color: $btn-secondary-bg-color;
+    }
+  }
+}
+#header {
+  input:focus {
+    outline: none;
+  }
+  @include flex-position(space-between, center);
+  height: 56px;
+  position: sticky;
+  z-index: 1;
+  top: 0;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  /*----*/
+  .header-left {
+    @include flex-row;
+    @include flex-position(flex-start);
+    flex: 0.28;
+    padding: 3px 14px;
+    img {
+      @include width-heigh(40px, 40px);
+      &:hover {
+        cursor: pointer;
+      }
+      margin-right: 8px;
+    }
+    &__search {
+      @include flex-row;
+      &-icon {
+        @include option-btn-png($imgSetting1, 0, -794px, 25px, 1014px, 16px);
+        @include secondary-icon-filter;
+        pointer-events: none;
+        margin: 0 8px 0 12px;
+      }
+    }
+    &__label {
+      @include flex-row;
+      @include flex-position;
+      height: 40px;
+      background-color: $comment-bg-color;
+      border-radius: 50px;
+    }
+
+    &__field {
+      @include width-heigh(200px, 40px);
+      border: none;
+      background-color: transparent;
+      font-size: 0.95rem;
+      &::placeholder {
+        color: $text-place-holder-cmt-color;
+        user-select: none;
+      }
+    }
+  }
+  .header-middle {
+    @include flex-row;
+    @include flex-position(space-between, center);
+    flex: 0.44;
+    height: 100%;
+    padding: 4px 14px 0 14px;
+    &__menu {
+      &-container {
+        @include flex-column;
+        @include width-heigh(20%, calc(100% - 3.4px));
+        margin: 0 5px 0 5px;
+      }
+      &--active {
+        @include width-heigh(100%, 4px);
+        border-top-left-radius: 1px;
+        border-top-right-radius: 1px;
+        background-color: $btn-primary-bg-color;
+      }
+      &--de-active {
+        @include width-heigh(100%, 4px);
+      }
+    }
+
+    &__home {
+      @include mid-btn-active-de-active;
+    }
+    &__watch {
+      @include mid-btn-active-de-active;
+    }
+    &__marketplace {
+      @include mid-btn-active-de-active;
+    }
+    &__group {
+      @include mid-btn-active-de-active;
+    }
+
+    &__gaming {
+      @include mid-btn-active-de-active;
+    }
+  }
+  .header-right {
+    @include flex-row;
+    @include flex-position(flex-end);
+    flex: 0.28;
+    padding: 3px 14px;
+    &__avatar {
+      &-container {
+        @include flex-row;
+        @include center;
+        height: 30px;
+        padding: 4px;
+        border-radius: 18px;
+        &:hover {
+          cursor: pointer;
+          background-color: $btn-secondary-hover-bg-color;
+        }
+        &:active {
+          cursor: pointer;
+          background-color: $btn-secondary-bg-color;
+        }
+      }
+      &-img {
+        @include width-heigh(30px, 30px);
+      }
+      span {
+        margin: 0 5px 0 5px;
+        font-size: $text-content-size;
+        font-weight: 600;
+        user-select: none;
+      }
+    }
+    &__create {
+      &-btn {
+        @include right-buttons;
+      }
+      &-icon {
+        @include option-btn-png($imgSetting1, 0, -570px, 25px, 1014px);
+      }
+    }
+
+    &__messenger-btn {
+      @include right-buttons;
+    }
+    &__notification-btn {
+      @include right-buttons;
+      .MuiBadge-badge > .MuiBadge-badge {
+        margin-right: 20px;
+      }
+    }
+    &__account {
+      &-btn {
+        @include right-buttons;
+      }
+      &-icon {
+        @include option-btn-png($imgSetting2, 0, -251px, 33px, 510px);
+      }
+    }
+  }
+}
