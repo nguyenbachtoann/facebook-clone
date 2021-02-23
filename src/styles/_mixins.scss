@@ -1,6 +1,13 @@
 @import "./variables";
 
-@mixin option-btn-png($imgUrl, $bgX, $bgY, $bgW, $bgH, $size: 20px) {
+@mixin option-btn-png(
+  $imgUrl,
+  $bgX: 0,
+  $bgY: 0,
+  $bgW: 0,
+  $bgH: 0,
+  $size: 20px
+) {
   background-image: url($imgUrl);
   background-position: $bgX $bgY;
   background-size: $bgW $bgH;
@@ -45,4 +52,42 @@
 @mixin secondary-icon-filter {
   filter: invert(38%) sepia(18%) saturate(249%) hue-rotate(174deg)
     brightness(96%) contrast(86%);
+}
+
+@mixin option-buttons {
+  @include width-heigh(40px, 40px);
+  @include center;
+  border-radius: 50%;
+  background-color: $btn-secondary-bg-color;
+  margin-left: 8px;
+  transition: all 0.3s ease-out;
+  &:hover {
+    cursor: pointer;
+    background-color: $btn-secondary-hover-color;
+    transition: all 0.1s ease-in;
+  }
+}
+@mixin md-option-buttons {
+  @include width-heigh(27px, 27px);
+  @include center;
+  border-radius: 50%;
+  background-color: $btn-secondary-bg-color;
+  &:hover {
+    cursor: pointer;
+    // background-color: $btn-secondary-hover-color;
+  }
+}
+
+@mixin font-style-min($size, $weight, $color: black) {
+  font-size: $size;
+  font-weight: $weight;
+  color: $color;
+}
+
+@mixin hover-change-bg-ease($bgColor) {
+  &:hover {
+    cursor: pointer;
+    background-color: $bgColor;
+    transition: all 0.1s ease-in;
+  }
 }

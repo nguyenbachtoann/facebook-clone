@@ -1,2 +1,11 @@
-@import "variables";
-@import "mixins";
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
+.widget {
+  font-size: 3rem;
+  top: 56px;
+  left: 77.5%;
+  bottom: 0;
+  position: fixed;
+  @include center;
+}

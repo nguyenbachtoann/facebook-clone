@@ -1,2 +1,12 @@
-@import "variables";
-@import "mixins";
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
+.feed {
+  font-size: 3rem;
+  top: 56px;
+  left: 23%;
+  bottom: 0;
+  position: fixed;
+  padding-left: 28px;
+  @include center;
+}

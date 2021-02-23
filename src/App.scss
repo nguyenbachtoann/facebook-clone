@@ -1,0 +1,20 @@
+@import "./styles/variables";
+@import "./styles/mixins";
+
+#app {
+  &__body {
+    .side {
+      width: 23%;
+      background-color: $app-bg-color;
+      z-index: 2;
+    }
+    .feed {
+      width: 54%;
+      background-color: $app-bg-color;
+    }
+    .widget {
+      width: 23%;
+      background-color: $app-bg-color;
+    }
+  }
+}

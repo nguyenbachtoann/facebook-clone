@@ -28,6 +28,7 @@ export const MENU_INFO = [
     iconClassName: "home-icon",
     isActive: "active",
     path: "/",
+    info: null,
   },
   {
     size: 28,
@@ -40,6 +41,7 @@ export const MENU_INFO = [
     className: "watch-icon",
     isActive: "de-active",
     path: "/watch",
+    info: null,
   },
   {
     size: 28,
@@ -52,6 +54,7 @@ export const MENU_INFO = [
     className: "marketplace-icon",
     isActive: "de-active",
     path: "/marketplace",
+    info: null,
   },
   {
     size: 28,
@@ -64,6 +67,7 @@ export const MENU_INFO = [
     className: "group-icon",
     isActive: "de-active",
     path: "/group",
+    info: "9+",
   },
   {
     size: 28,
@@ -76,5 +80,6 @@ export const MENU_INFO = [
     className: "gaming-icon",
     isActive: "de-active",
     path: "/gaming",
+    info: "6",
   },
 ];

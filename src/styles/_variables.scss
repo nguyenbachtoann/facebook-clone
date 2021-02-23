@@ -1,5 +1,6 @@
 // Colors - App
 $app-primary-color: #1877f2;
+$app-bg-color: #f1f2f5;
 
 // Color - Icon
 $icon-secondary-filter-color: #606770;
@@ -8,21 +9,29 @@ $icon-secondary-color: #606770;
 // Color - Button
 $btn-primary-bg-color: #1877f2;
 $btn-secondary-bg-color: #e4e6eb;
+$btn-secondary-hover-color: #d3d5de;
 $btn-secondary-hover-bg-color: #f0f2f5;
+$btn-secondary-hover-bg-highlight-color: #e2e5ee;
+$btn-third-bg-color: #dee0e4;
 
 // Color Field
 $comment-bg-color: #f2f3f5;
 
 // Color - Border
+$divider-bg-color: #cdd0d4;
 
 // Color - Text
-$text-place-holder-cmt-color: #8a8d91;
+$text-place-holder-cmt-color: #606972;
+$text-content-header-color: #65676b;
+$text-info-gray: #606972;
+$text-link-color: #1877f2;
 
 // Size - Text
 $text-topic-size: 1.5rem;
 $text-title-size: 1.2rem;
-$text-content-size: 0.9rem;
-$text-info-size: 0.5rem;
+$text-content-header-size: 1rem;
+$text-content-size: 0.87rem;
+$text-info-size: 0.75rem;
 $text-primary-placeholder-size: 0.95rem;
 
 // Image Setting

@@ -6,11 +6,13 @@ import { I_MESSENGER, I_NOTIFICATION } from "../../assets/images/svg";
 import { Icon } from "../common";
 import { Avatar } from "@material-ui/core";
 import { TEXTS, MENU_INFO } from "./Constants";
-import { CustomBadge } from "./CustomBadge";
+import { NotificationBadge, MenuBadge } from "./CustomBadge";
 
 function Header() {
   const { texSearch } = TEXTS;
-  const [current, setCurrent] = useState("");
+  const [HOME] = MENU_INFO;
+  const [current, setCurrent] = useState(HOME.path);
+
   const handleChooseMenu = (path) => {
     localStorage.setItem("currentMenu", path);
     setCurrent(path);
@@ -22,9 +24,9 @@ function Header() {
 
   useEffect(() => {
     setCurrent(localStorage.getItem("currentMenu"));
-  }, [setCurrent]);
+  }, [setCurrent, current]);
 
-  const ComponentWithBadge = (
+  const NotificationWithBadge = (
     <div className="header-right__notification-badge">
       <Icon
         className="header-right__notification-icon"
@@ -32,6 +34,15 @@ function Header() {
         title="Game"
       />
     </div>
+  );
+  const MenuWithBadge = (item) => (
+    <Icon
+      size={item.size}
+      color={isCurrent(item.path) ? item.colorFilled : item.color}
+      icon={isCurrent(item.path) ? item.iconFilled : item.icon}
+      title={item.title}
+      className={`header-middle__${item.iconClassName}`}
+    />
   );
 
   return (
@@ -66,13 +77,18 @@ function Header() {
                 }`}
                 title={item.title}
               >
-                <Icon
+                <MenuBadge
+                  component={MenuWithBadge(item)}
+                  content={item.info && item.info}
+                  color="secondary"
+                />
+                {/* <Icon
                   size={item.size}
                   color={isCurrent(item.path) ? item.colorFilled : item.color}
                   icon={isCurrent(item.path) ? item.iconFilled : item.icon}
                   title={item.title}
                   className={`header-middle__${item.iconClassName}`}
-                />
+                /> */}
               </div>
               <div
                 className={`header-middle__menu${
@@ -105,8 +121,8 @@ function Header() {
           />
         </div>
         <div className="header-right__notification-btn" title="Notification">
-          <CustomBadge
-            component={ComponentWithBadge}
+          <NotificationBadge
+            component={NotificationWithBadge}
             content="2"
             color="secondary"
           />

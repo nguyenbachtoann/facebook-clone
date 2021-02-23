@@ -1,0 +1,154 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
+@mixin scroll-bar-style {
+  &::-webkit-scrollbar-track {
+    display: none;
+  }
+}
+
+* {
+  user-select: none;
+}
+
+.side {
+  @include scroll-bar-style;
+  padding: 16px 14px 6px 9px;
+  overflow: hidden;
+  top: 56px;
+  bottom: 0;
+  position: fixed;
+  transition: all 0.3s ease-out;
+  &:hover {
+    @include scroll-bar-style;
+    overflow-y: overlay;
+    overflow-x: hidden;
+    transition: all 0.1s ease-in;
+  }
+
+  // for all
+  &__option {
+    border-radius: 8px;
+    transition: all 0.3s ease-out;
+    &-wrapper {
+      @include flex-position(flex-start, center);
+      @include width-heigh(100%, 44px);
+      padding-left: 7px;
+    }
+    // hover
+    @include hover-change-bg-ease($btn-secondary-hover-bg-highlight-color);
+    &-icon {
+      &-wrapper {
+        @include flex-position(unset, center);
+        height: 100%;
+        margin-right: 10px;
+      }
+      @include width-heigh(28px, 28px);
+      border-radius: 50%;
+    }
+
+    &-text {
+      &-wrapper {
+        @include flex-column;
+        @include flex-position(space-around, unset);
+        @include font-style-min($text-content-size, 500);
+        height: 100%;
+      }
+      &-info {
+        &-wrapper {
+          @include flex-row;
+          @include center;
+          @include font-style-min($text-info-size, 400, $text-link-color);
+          .text-info-dot {
+            @include width-heigh(7px, 7px);
+            border-radius: 50%;
+            background-color: $text-link-color;
+            margin-right: 4px;
+          }
+        }
+      }
+    }
+
+    &-more {
+      .side__option-wrapper {
+        .side__icon {
+          &-wrapper {
+            @include md-option-buttons;
+            background-color: $btn-third-bg-color;
+            margin-right: 10px;
+          }
+          @include option-btn-png($imgSetting1, 2px, -209px, 20px, 780px);
+        }
+      }
+    }
+  }
+
+  &__divider {
+    height: 0.8px;
+    background-color: $divider-bg-color;
+    margin: 10px 7px;
+  }
+
+  &__shortcut {
+    @include width-heigh(100%, fit-content);
+    margin-bottom: 12px;
+    &-header {
+      @include width-heigh(100%, 35px);
+      @include flex-position(unset, center);
+      .shortcut-header {
+        &__title {
+          @include font-style-min(
+            $text-content-header-size,
+            600,
+            $text-content-header-color
+          );
+          padding-left: 7px;
+          flex: 0.7;
+        }
+        &__actions {
+          @include center;
+          @include font-style-min($text-content-size, 400, $text-link-color);
+          display: none;
+          flex: 0.3;
+          height: 100%;
+          border-radius: 8px;
+          transition: all 0.3s ease-out;
+          // hover
+          @include hover-change-bg-ease(
+            $btn-secondary-hover-bg-highlight-color
+          );
+        }
+      }
+    }
+    &:hover {
+      .shortcut-header__actions {
+        display: block;
+        @include center;
+      }
+    }
+  }
+
+  &__footer {
+    @include font-style-min($text-info-size, 400, $text-info-gray);
+    margin-bottom: 10px;
+    &-wrapper {
+      padding-left: 7px;
+    }
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+    &-dot {
+      margin: 0 3px;
+    }
+    &-text {
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+    &-text-ads-choices-warning {
+      @include option-btn-png($imgSetting1, 0px, -875px, 25px, 1018px, 12px);
+      @include secondary-icon-filter;
+    }
+  }
+}

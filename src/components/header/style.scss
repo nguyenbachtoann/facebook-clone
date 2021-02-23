@@ -5,20 +5,11 @@
   @include center;
   @include width-heigh-100;
   border-radius: 10px;
+  transition: all 0.3s ease-out;
   &:hover {
     cursor: pointer;
+    transition: all 0.1s ease-in;
     background-color: $btn-secondary-hover-bg-color;
-  }
-}
-
-@mixin right-buttons {
-  @include width-heigh(40px, 40px);
-  @include center;
-  border-radius: 50%;
-  background-color: $btn-secondary-bg-color;
-  margin-left: 8px;
-  &:hover {
-    cursor: pointer;
   }
 }
 
@@ -41,15 +32,16 @@
   @include flex-position(space-between, center);
   height: 56px;
   position: sticky;
-  z-index: 1;
+  z-index: 10;
   top: 0;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  background-color: white;
   /*----*/
   .header-left {
     @include flex-row;
     @include flex-position(flex-start);
     flex: 0.28;
-    padding: 3px 14px;
+    padding: 3px 16px;
     img {
       @include width-heigh(40px, 40px);
       &:hover {
@@ -102,9 +94,11 @@
         border-top-left-radius: 1px;
         border-top-right-radius: 1px;
         background-color: $btn-primary-bg-color;
+        transition: all 0.2s ease-in;
       }
       &--de-active {
         @include width-heigh(100%, 4px);
+        transition: all 0.2s ease-out;
       }
     }
 
@@ -137,12 +131,15 @@
         height: 30px;
         padding: 4px;
         border-radius: 18px;
+        transition: all 0.3s ease-out;
         &:hover {
           cursor: pointer;
+          transition: all 0.1s ease-in;
           background-color: $btn-secondary-hover-bg-color;
         }
         &:active {
           cursor: pointer;
+          transition: all 0.1s ease-in;
           background-color: $btn-secondary-bg-color;
         }
       }
@@ -158,7 +155,7 @@
     }
     &__create {
       &-btn {
-        @include right-buttons;
+        @include option-buttons;
       }
       &-icon {
         @include option-btn-png($imgSetting1, 0, -570px, 25px, 1014px);
@@ -166,17 +163,17 @@
     }
 
     &__messenger-btn {
-      @include right-buttons;
+      @include option-buttons;
     }
     &__notification-btn {
-      @include right-buttons;
+      @include option-buttons;
       .MuiBadge-badge > .MuiBadge-badge {
         margin-right: 20px;
       }
     }
     &__account {
       &-btn {
-        @include right-buttons;
+        @include option-buttons;
       }
       &-icon {
         @include option-btn-png($imgSetting2, 0, -251px, 33px, 510px);

@@ -1,7 +1,7 @@
-import "./App.css";
+import "./App.scss";
 import { useEffect } from "react";
-import { Header } from "./components/header";
-import { MENU_INFO } from "./components/header";
+import { Header, MENU_INFO, Side, Feed, Widget } from "./components";
+
 function App() {
   const [HOME] = MENU_INFO;
   useEffect(() => {
@@ -13,14 +13,13 @@ function App() {
     }
   }, [HOME]);
   return (
-    <div className="App">
+    <div className="app">
       <Header />
-
-      {/** Header */}
-      {/** App Body */}
-      {/**    Side Bar */}
-      {/**    Feed */}
-      {/**    Widget*/}
+      <div id="app__body">
+        <Side />
+        <Feed />
+        <Widget />
+      </div>
     </div>
   );
 }
