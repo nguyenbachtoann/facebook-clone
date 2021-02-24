@@ -41,7 +41,7 @@ export const MENU_INFO = [
     className: "watch-icon",
     isActive: "de-active",
     path: "/watch",
-    info: null,
+    info: "9+",
   },
   {
     size: 28,

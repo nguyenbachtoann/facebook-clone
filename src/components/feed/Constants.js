@@ -1,22 +1,27 @@
+import { importAllImgs } from "../../helpers";
+const IMGS = importAllImgs();
+
+const imgPreFix = "story";
+
 export const FEED_STORIES_INFO = [
   {
     user: "Bơ",
-    avatar: "",
-    storyMedia: "",
+    avatar: IMGS[`${imgPreFix}_roseavatar.jpg`].default,
+    storyMedia: IMGS[`${imgPreFix}_rosemedia.jpg`].default,
   },
   {
     user: "Lía",
-    avatar: "",
-    storyMedia: "",
+    avatar: IMGS[`${imgPreFix}_lisaavatar.jpg`].default,
+    storyMedia: IMGS[`${imgPreFix}_lisamedia.jpg`].default,
   },
   {
     user: "Chi Chu",
-    avatar: "",
-    storyMedia: "",
+    avatar: IMGS[`${imgPreFix}_jisooavatar.jpg`].default,
+    storyMedia: IMGS[`${imgPreFix}_jisoomedia.jpg`].default,
   },
   {
     user: "Chén Nì",
-    avatar: "",
-    storyMedia: "",
+    avatar: IMGS[`${imgPreFix}_jennieavatar.jpg`].default,
+    storyMedia: IMGS[`${imgPreFix}_jenniemedia.jpg`].default,
   },
 ];

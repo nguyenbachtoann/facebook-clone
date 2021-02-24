@@ -82,13 +82,6 @@ function Header() {
                   content={item.info && item.info}
                   color="secondary"
                 />
-                {/* <Icon
-                  size={item.size}
-                  color={isCurrent(item.path) ? item.colorFilled : item.color}
-                  icon={isCurrent(item.path) ? item.iconFilled : item.icon}
-                  title={item.title}
-                  className={`header-middle__${item.iconClassName}`}
-                /> */}
               </div>
               <div
                 className={`header-middle__menu${

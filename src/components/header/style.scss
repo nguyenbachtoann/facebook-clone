@@ -30,11 +30,12 @@
     outline: none;
   }
   @include flex-position(space-between, center);
+  @include box-shadow;
   height: 56px;
   position: sticky;
   z-index: 10;
   top: 0;
-  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+
   background-color: white;
   /*----*/
   .header-left {
@@ -147,9 +148,8 @@
         @include width-heigh(30px, 30px);
       }
       span {
+        @include font-style-min($text-content-size, 600);
         margin: 0 5px 0 5px;
-        font-size: $text-content-size;
-        font-weight: 600;
         user-select: none;
       }
     }

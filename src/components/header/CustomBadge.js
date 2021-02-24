@@ -11,7 +11,7 @@ const StyledNotificationBadge = withStyles((theme) => ({
 }))(Badge);
 const StyledMenuBadge = withStyles((theme) => ({
   badge: {
-    right: -5,
+    right: -3,
     top: 2,
     padding: "0 5px",
     fontSize: 13,
