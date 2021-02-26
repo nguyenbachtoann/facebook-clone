@@ -1,25 +1,14 @@
 @import "../../styles/variables";
 @import "../../styles/mixins";
 
-@mixin hover-background-color-border {
-  @include center;
-  @include width-heigh-100;
-  border-radius: 10px;
-  transition: all 0.3s ease-out;
-  &:hover {
-    cursor: pointer;
-    transition: all 0.1s ease-in;
-    background-color: $btn-secondary-hover-bg-color;
-  }
-}
-
 @mixin mid-btn-active-de-active {
   &--active {
     @include center;
-    @include width-heigh-100;
+    @include width-height-100;
   }
   &--de-active {
     @include hover-background-color-border;
+    @include width-height-100;
     &:active {
       background-color: $btn-secondary-bg-color;
     }
@@ -43,8 +32,8 @@
     @include flex-position(flex-start);
     flex: 0.28;
     padding: 3px 16px;
-    img {
-      @include width-heigh(40px, 40px);
+    &__logo {
+      @include width-height(40px, 40px);
       &:hover {
         cursor: pointer;
       }
@@ -68,7 +57,7 @@
     }
 
     &__field {
-      @include width-heigh(200px, 40px);
+      @include width-height(200px, 40px);
       border: none;
       background-color: transparent;
       font-size: 0.95rem;
@@ -87,18 +76,21 @@
     &__menu {
       &-container {
         @include flex-column;
-        @include width-heigh(20%, calc(100% - 3.4px));
+        @include width-height(20%, calc(100% - 3.1px));
         margin: 0 5px 0 5px;
+        a {
+          @include width-height(100%, calc(100% - 3.1px));
+        }
       }
       &--active {
-        @include width-heigh(100%, 4px);
+        @include width-height(100%, 3px);
         border-top-left-radius: 1px;
         border-top-right-radius: 1px;
         background-color: $btn-primary-bg-color;
         transition: all 0.2s ease-in;
       }
       &--de-active {
-        @include width-heigh(100%, 4px);
+        @include width-height(100%, 3px);
         transition: all 0.2s ease-out;
       }
     }
@@ -145,7 +137,7 @@
         }
       }
       &-img {
-        @include width-heigh(30px, 30px);
+        @include width-height(30px, 30px);
       }
       span {
         @include font-style-min($text-content-size, 600);

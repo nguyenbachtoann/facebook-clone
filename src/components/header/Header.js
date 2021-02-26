@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
-import logo from "../../assets/images/logo.png";
 import avatar from "../../assets/images/avatar.jpg";
 import "./style.scss";
 import { I_MESSENGER, I_NOTIFICATION } from "../../assets/images/svg";
 import { Icon } from "../common";
+import { LogoIcon } from "./LogoIcon";
 import { Avatar } from "@material-ui/core";
 import { TEXTS, MENU_INFO } from "./Constants";
 import { NotificationBadge, MenuBadge } from "./CustomBadge";
@@ -48,7 +48,8 @@ function Header() {
   return (
     <div id="header">
       <div className="header-left">
-        <img className="header-left__logo" src={logo} alt="Header Logo" />
+        <LogoIcon />
+        {/* <img className="header-left__logo" src={logo} alt="Header Logo" /> */}
         <div className="header-left__search">
           <label className="header-left__label">
             <div className="header-left__search-history" />
@@ -71,23 +72,25 @@ function Header() {
                 handleChooseMenu(item.path);
               }}
             >
-              <div
-                className={`header-middle__${item.wrapClassName}${
-                  isCurrent(item.path) ? "--active" : "--de-active"
-                }`}
-                title={item.title}
-              >
-                <MenuBadge
-                  component={MenuWithBadge(item)}
-                  content={item.info && item.info}
-                  color="secondary"
+              <a href="#">
+                <div
+                  className={`header-middle__${item.wrapClassName}${
+                    isCurrent(item.path) ? "--active" : "--de-active"
+                  }`}
+                  title={item.title}
+                >
+                  <MenuBadge
+                    component={MenuWithBadge(item)}
+                    content={item.info && item.info}
+                    color="secondary"
+                  />
+                </div>
+                <div
+                  className={`header-middle__menu${
+                    isCurrent(item.path) ? "--active" : "--de-active"
+                  }`}
                 />
-              </div>
-              <div
-                className={`header-middle__menu${
-                  isCurrent(item.path) ? "--active" : "--de-active"
-                }`}
-              />
+              </a>
             </div>
           );
         })}

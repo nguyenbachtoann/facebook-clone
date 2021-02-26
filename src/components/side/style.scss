@@ -1,5 +1,6 @@
 @import "../../styles/variables";
 @import "../../styles/mixins";
+@import "../../App.scss";
 
 @mixin scroll-bar-style {
   &::-webkit-scrollbar-track {
@@ -33,7 +34,7 @@
     transition: all 0.3s ease-out;
     &-wrapper {
       @include flex-position(flex-start, center);
-      @include width-heigh(100%, 44px);
+      @include width-height(100%, 44px);
       padding-left: 7px;
     }
     // hover
@@ -44,7 +45,7 @@
         height: 100%;
         margin-right: 10px;
       }
-      @include width-heigh(28px, 28px);
+      @include width-height(28px, 28px);
       border-radius: 50%;
     }
 
@@ -61,7 +62,7 @@
           @include center;
           @include font-style-min($text-info-size, 400, $text-link-color);
           .text-info-dot {
-            @include width-heigh(7px, 7px);
+            @include width-height(7px, 7px);
             border-radius: 50%;
             background-color: $text-link-color;
             margin-right: 4px;
@@ -85,16 +86,14 @@
   }
 
   &__divider {
-    height: 0.8px;
-    background-color: $divider-bg-color;
     margin: 10px 7px;
   }
 
   &__shortcut {
-    @include width-heigh(100%, fit-content);
+    @include width-height(100%, fit-content);
     margin-bottom: 12px;
     &-header {
-      @include width-heigh(100%, 35px);
+      @include width-height(100%, 35px);
       @include flex-position(unset, center);
       .shortcut-header {
         &__title {
@@ -135,10 +134,7 @@
     &-wrapper {
       padding-left: 7px;
     }
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
+
     &-dot {
       margin: 0 3px;
     }

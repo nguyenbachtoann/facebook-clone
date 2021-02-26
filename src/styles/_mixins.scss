@@ -17,11 +17,11 @@
   height: $size;
 }
 
-@mixin width-heigh($w, $h) {
+@mixin width-height($w, $h) {
   width: $w;
   height: $h;
 }
-@mixin width-heigh-100 {
+@mixin width-height-100 {
   width: 100%;
   height: 100%;
 }
@@ -55,7 +55,7 @@
 }
 
 @mixin option-buttons {
-  @include width-heigh(40px, 40px);
+  @include width-height(40px, 40px);
   @include center;
   border-radius: 50%;
   background-color: $btn-secondary-bg-color;
@@ -68,7 +68,7 @@
   }
 }
 @mixin md-option-buttons {
-  @include width-heigh(27px, 27px);
+  @include width-height(27px, 27px);
   @include center;
   border-radius: 50%;
   background-color: $btn-secondary-bg-color;
@@ -93,6 +93,25 @@
 }
 
 @mixin box-shadow {
-  box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em,
-    rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px,
+    rgba(0, 0, 0, 0.06) 0px 1px 5px 0px;
+}
+
+@mixin hover-background-color-border {
+  @include center;
+  border-radius: 8px;
+  transition: all 0.3s ease-out;
+  &:hover {
+    cursor: pointer;
+    transition: all 0.1s ease-in;
+    background-color: $btn-secondary-hover-bg-color;
+  }
+}
+
+@mixin click-change-bg-ease($bg: $btn-secondary-bg-color) {
+  &:active {
+    cursor: pointer;
+    transition: all 0.1s ease-in;
+    background-color: $bg;
+  }
 }

@@ -10,6 +10,11 @@ function importAllImgs() {
     false,
     /\.(png|jpe?g|svg)$/
   );
+  const rFriendStatus = require.context(
+    "../assets/images/feed/friendstatus",
+    false,
+    /\.(png|jpe?g|svg)$/
+  );
   let images = {};
   r.keys().forEach((item) => {
     images[item.replace("./", "")] = r(item);
@@ -19,6 +24,9 @@ function importAllImgs() {
   });
   rFeedStory.keys().forEach((item) => {
     images[item.replace("./", "")] = rFeedStory(item);
+  });
+  rFriendStatus.keys().forEach((item) => {
+    images[item.replace("./", "")] = rFriendStatus(item);
   });
   return images;
 }

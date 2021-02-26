@@ -1,6 +1,12 @@
 import { importAllImgs } from "../../helpers";
 
 const IMGS = importAllImgs();
+
+export const TEXTS = {
+  showMore: "Xem thêm",
+  shortcutTitle: "Lối tắt của bạn",
+  shortcutEdit: "Chỉnh sửa",
+};
 export const SIDE_NAVIGATE_INFO = [
   {
     title: "User",

@@ -1,0 +1,73 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
+.feed {
+  &__status {
+    @include width-height(500px, 123px);
+    @include center;
+    user-select: none;
+    &-wrapper {
+      @include width-height-100;
+      @include box-shadow;
+      border-radius: 8px;
+      background-color: white;
+      .divider {
+        margin: 0 15px;
+      }
+    }
+    .status__action-wrapper {
+      @include center;
+      padding: 12px 15px;
+      .status__avatar {
+        &:hover {
+          cursor: pointer;
+          filter: brightness(95%);
+        }
+      }
+      .status__label {
+        @include flex-row;
+        @include flex-position(unset, center);
+        @include width-height(90%, 40px);
+        margin-left: 8px;
+        background-color: $comment-bg-color;
+        border-radius: 50px;
+        color: $text-place-holder-cmt-color;
+        span {
+          font-size: $text-status-placeholder-size;
+          margin-left: 12px;
+        }
+        // hover
+        @include hover-change-bg-ease($btn-secondary-hover-bg-highlight-color);
+      }
+    }
+    .status__option {
+      &-wrapper {
+        @include width-height(100%, 59px);
+        @include center;
+      }
+      &-container {
+        @include width-height(95%, 59px);
+        @include flex-position(space-around, center);
+      }
+      height: 40px;
+      @include font-style-min($text-content-size, 600, $text-info-gray);
+      @include hover-background-color-border;
+      @include click-change-bg-ease;
+      .icon-wrapper {
+        display: flex;
+        .status__icon {
+          margin-right: 8px;
+        }
+      }
+      &-media {
+        flex: 0.3;
+      }
+      &-tagging {
+        flex: 0.3;
+      }
+      &-emotion-activity {
+        flex: 0.4;
+      }
+    }
+  }
+}

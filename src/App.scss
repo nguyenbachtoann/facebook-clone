@@ -18,3 +18,13 @@
     }
   }
 }
+
+.divider {
+  height: 0.3px;
+  background-color: $divider-bg-color;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
