@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import avatar from "../../assets/images/avatar.jpg";
 import "./style.scss";
 import { I_MESSENGER, I_NOTIFICATION } from "../../assets/images/svg";
-import { Icon } from "../common";
+import { Icon, TooltipInner, StyledTooltip } from "../common";
 import { LogoIcon } from "./LogoIcon";
 import { Avatar } from "@material-ui/core";
 import { TEXTS, MENU_INFO } from "./Constants";
@@ -63,37 +63,39 @@ function Header() {
         </div>
       </div>
       <div className="header-middle">
-        {MENU_INFO.map((item, i) => {
-          return (
-            <div
-              className="header-middle__menu-container"
-              key={i}
-              onClick={() => {
-                handleChooseMenu(item.path);
-              }}
-            >
-              <a href="#">
-                <div
-                  className={`header-middle__${item.wrapClassName}${
-                    isCurrent(item.path) ? "--active" : "--de-active"
-                  }`}
-                  title={item.title}
-                >
-                  <MenuBadge
-                    component={MenuWithBadge(item)}
-                    content={item.info && item.info}
-                    color="secondary"
-                  />
-                </div>
-                <div
-                  className={`header-middle__menu${
-                    isCurrent(item.path) ? "--active" : "--de-active"
-                  }`}
-                />
-              </a>
-            </div>
-          );
-        })}
+        {MENU_INFO &&
+          MENU_INFO.map((item, i) => {
+            return (
+              <div
+                className="header-middle__menu-container"
+                onClick={() => {
+                  handleChooseMenu(item.path);
+                }}
+                key={i}
+              >
+                <StyledTooltip title={TooltipInner(item.title)}>
+                  <a href="#">
+                    <div
+                      className={`header-middle__${item.wrapClassName}${
+                        isCurrent(item.path) ? "--active" : "--de-active"
+                      }`}
+                    >
+                      <MenuBadge
+                        component={MenuWithBadge(item)}
+                        content={item.info && item.info}
+                        color="secondary"
+                      />
+                    </div>
+                    <div
+                      className={`header-middle__menu${
+                        isCurrent(item.path) ? "--active" : "--de-active"
+                      }`}
+                    />
+                  </a>
+                </StyledTooltip>
+              </div>
+            );
+          })}
       </div>
       <div className="header-right">
         <div className="header-right__avatar" title="Avatar">
@@ -106,26 +108,34 @@ function Header() {
             <span>Nguyễn</span>
           </div>
         </div>
-        <div className="header-right__create-btn" title="Create">
-          <i className="header-right__create-icon" />
-        </div>
-        <div className="header-right__messenger-btn" title="Messenger">
-          <Icon
-            className="header-right__messenger-icon"
-            icon={I_MESSENGER}
-            title="Game"
-          />
-        </div>
-        <div className="header-right__notification-btn" title="Notification">
-          <NotificationBadge
-            component={NotificationWithBadge}
-            content="2"
-            color="secondary"
-          />
-        </div>
-        <div className="header-right__account-btn" title="Account">
-          <i className="header-right__account-icon" />
-        </div>
+        <StyledTooltip title={TooltipInner("Create")}>
+          <div className="header-right__create-btn">
+            <i className="header-right__create-icon" />
+          </div>
+        </StyledTooltip>
+        <StyledTooltip title={TooltipInner("Messenger")}>
+          <div className="header-right__messenger-btn">
+            <Icon
+              className="header-right__messenger-icon"
+              icon={I_MESSENGER}
+              title="Game"
+            />
+          </div>
+        </StyledTooltip>
+        <StyledTooltip title={TooltipInner("Notification")}>
+          <div className="header-right__notification-btn">
+            <NotificationBadge
+              component={NotificationWithBadge}
+              content="2"
+              color="secondary"
+            />
+          </div>
+        </StyledTooltip>
+        <StyledTooltip title={TooltipInner("Account")}>
+          <div className="header-right__account-btn">
+            <i className="header-right__account-icon" />
+          </div>
+        </StyledTooltip>
       </div>
     </div>
   );

@@ -2,6 +2,7 @@ import React from "react";
 import "./style.scss";
 import "./styleStory.scss";
 import "./styleStatus.scss";
+import "./styleFriendStatus.scss";
 import { StoryReel } from "./StoryReel";
 import { Status } from "./Status";
 import { FriendStatus } from "./FriendStatus";

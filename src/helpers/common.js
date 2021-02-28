@@ -15,6 +15,11 @@ function importAllImgs() {
     false,
     /\.(png|jpe?g|svg)$/
   );
+  const rWidget = require.context(
+    "../assets/images/widget",
+    false,
+    /\.(png|jpe?g|svg)$/
+  );
   let images = {};
   r.keys().forEach((item) => {
     images[item.replace("./", "")] = r(item);
@@ -27,6 +32,9 @@ function importAllImgs() {
   });
   rFriendStatus.keys().forEach((item) => {
     images[item.replace("./", "")] = rFriendStatus(item);
+  });
+  rWidget.keys().forEach((item) => {
+    images[item.replace("./", "")] = rWidget(item);
   });
   return images;
 }

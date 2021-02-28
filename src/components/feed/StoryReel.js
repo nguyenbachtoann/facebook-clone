@@ -23,9 +23,8 @@ function StoryReel() {
             </span>
           </div>
         </div>
-        {FEED_STORIES_INFO.map((item, i) => (
-          <Story item={item} key={i} />
-        ))}
+        {FEED_STORIES_INFO &&
+          FEED_STORIES_INFO.map((item, i) => <Story item={item} key={i} />)}
         <div className="story-reel__go-btn" title={TEXTS.storyGo}>
           <i className="story__go-btn-icon" title={TEXTS.storyGo} />
         </div>

@@ -37,20 +37,21 @@ function Status() {
         <Divider />
         <div className="status__option-wrapper">
           <div className="status__option-container">
-            {POST_ACTION_INFO.map((item, i) => (
-              <div
-                className={`status__option status__option-${item.wrapClassName}`}
-                key={i}
-              >
-                <div className="icon-wrapper">
-                  <i
-                    className={`status__option-${item.iconClassName} status__icon`}
-                    style={statusIconStyle(item)}
-                  />
+            {POST_ACTION_INFO &&
+              POST_ACTION_INFO.map((item, i) => (
+                <div
+                  className={`status__option status__option-${item.wrapClassName}`}
+                  key={i}
+                >
+                  <div className="icon-wrapper">
+                    <i
+                      className={`status__option-${item.iconClassName} status__icon`}
+                      style={statusIconStyle(item)}
+                    />
+                  </div>
+                  <span>{item.text}</span>
                 </div>
-                <span>{item.text}</span>
-              </div>
-            ))}
+              ))}
           </div>
         </div>
       </div>

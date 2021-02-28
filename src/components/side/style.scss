@@ -2,18 +2,11 @@
 @import "../../styles/mixins";
 @import "../../App.scss";
 
-@mixin scroll-bar-style {
-  &::-webkit-scrollbar-track {
-    display: none;
-  }
-}
-
 * {
   user-select: none;
 }
 
 .side {
-  @include scroll-bar-style;
   padding: 16px 14px 6px 9px;
   overflow: hidden;
   top: 56px;
@@ -22,7 +15,6 @@
   transition: all 0.3s ease-out;
 
   &:hover {
-    @include scroll-bar-style;
     overflow-y: overlay;
     overflow-x: hidden;
     transition: all 0.1s ease-in;
@@ -46,6 +38,7 @@
         margin-right: 10px;
       }
       @include width-height(28px, 28px);
+      object-fit: cover;
       border-radius: 50%;
     }
 

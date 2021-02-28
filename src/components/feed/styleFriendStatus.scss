@@ -1,0 +1,75 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+@import "./style.scss";
+
+.feed {
+  &__friend-status {
+    @include width-height(500px, 64px);
+    @include center;
+    @include box-shadow;
+    margin-top: 18px;
+    border-radius: 8px;
+    background-color: white;
+    overflow-x: auto;
+    overflow-y: hidden;
+    position: relative;
+    // * Firefox *
+    scrollbar-width: none;
+    &::-webkit-scrollbar {
+      @include width-height(0px, 0px);
+    }
+    &-wrapper {
+      @include flex-row;
+      width: 500px;
+      &:after {
+        content: "";
+        display: block;
+        min-width: 30px;
+      }
+    }
+    .friend-status {
+      &__create-meeting {
+        @include center;
+        min-width: 185px;
+        border: 2px solid $btn-create-meeting;
+        border-radius: 20px;
+        margin: 0 16px;
+        // hover
+        @include hover-change-bg-ease($btn-secondary-hover-bg-color);
+        .create-meeting__btn {
+          @include center;
+          height: 100%;
+          margin-right: 10px;
+          &-icon {
+            @include option-btn-png($imgSetting4, 0, 0, 25px, 166px, 24px);
+          }
+        }
+        span {
+          @include font-style-min($text-content-size, 600, $text-link-color);
+        }
+      }
+      &__go-next {
+        @include navigate-btn;
+        position: fixed;
+        margin-left: 420px;
+      }
+      &__go-prev {
+        @include navigate-btn;
+        position: fixed;
+        margin-left: -420px;
+      }
+    }
+    .online-user-wrapper {
+      margin-right: 16px;
+      transition: all 0.3s ease-out;
+      &:hover {
+        cursor: pointer;
+        filter: brightness(90%);
+        transition: all 0.1s ease-in;
+      }
+      .online-user-avatar {
+        position: absolute;
+      }
+    }
+  }
+}

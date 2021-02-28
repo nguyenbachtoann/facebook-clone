@@ -1,0 +1,17 @@
+@import "../../styles/mixins";
+@import "../../styles/variables";
+
+// tooltips
+.tooltip-inner {
+  @include flex-column;
+  @include center;
+  margin: 2px;
+  .inner-title {
+    @include font-style-min($text-content-size, 600, white);
+    margin: 2px;
+  }
+  .inner-text {
+    @include font-style-min($text-info-size, 500, white);
+    margin: 2px;
+  }
+}

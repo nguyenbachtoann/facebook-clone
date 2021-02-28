@@ -9,6 +9,7 @@ export const TEXTS = {
   createStory: "Tạo tin",
   statusPlaceHolder: "Nguyễn ơi, bạn đang nghĩ gì thế?",
   friendStatusCreateMeeting: "Tạo phòng họp mặt",
+  friendStatusSendGreeting: "Gửi lời chào",
 };
 
 export const FEED_STORIES_INFO = [
@@ -63,83 +64,103 @@ export const POST_ACTION_INFO = [
 
 export const ONLINE_FRIENDS = [
   {
-    user: "Clairo",
-    avatar: IMGS[`${fsPreFix}_clairo.jpg`].default,
+    text: "Clairo",
+    icon: IMGS[`${fsPreFix}_clairo.jpg`].default,
   },
   {
-    user: "Dean",
-    avatar: IMGS[`${fsPreFix}_dean.jpg`].default,
+    text: "Dean",
+    icon: IMGS[`${fsPreFix}_dean.jpg`].default,
   },
   {
-    user: "Chi Chu",
-    avatar: IMGS[`${strPreFix}_jisooavatar.jpg`].default,
+    text: "Chi Chu",
+    icon: IMGS[`${strPreFix}_jisooavatar.jpg`].default,
   },
   {
-    user: "Chén Nì",
-    avatar: IMGS[`${strPreFix}_jennieavatar.jpg`].default,
+    text: "Chén Nì",
+    icon: IMGS[`${strPreFix}_jennieavatar.jpg`].default,
   },
   {
-    user: "Bơ",
-    avatar: IMGS[`${strPreFix}_roseavatar.jpg`].default,
+    text: "Bơ",
+    icon: IMGS[`${strPreFix}_roseavatar.jpg`].default,
   },
   {
-    user: "Lía",
-    avatar: IMGS[`${strPreFix}_lisaavatar.jpg`].default,
+    text: "Lía",
+    icon: IMGS[`${strPreFix}_lisaavatar.jpg`].default,
   },
   {
-    user: "ASAP Rocky",
-    avatar: IMGS[`${fsPreFix}_asaprocky.jpg`].default,
+    text: "ASAP Rocky",
+    icon: IMGS[`${fsPreFix}_asaprocky.jpg`].default,
   },
   {
-    user: "Billie Eilish",
-    avatar: IMGS[`${fsPreFix}_billieeilish.jpg`].default,
+    text: "Billie Eilish",
+    icon: IMGS[`${fsPreFix}_billieeilish.jpg`].default,
   },
   {
-    user: "Cuco",
-    avatar: IMGS[`${fsPreFix}_cuco.jpg`].default,
+    text: "Cuco",
+    icon: IMGS[`${fsPreFix}_cuco.jpg`].default,
   },
   {
-    user: "DPR Live",
-    avatar: IMGS[`${fsPreFix}_dprlive.jpg`].default,
+    text: "DPR Live",
+    icon: IMGS[`${fsPreFix}_dprlive.jpg`].default,
   },
   {
-    user: "DPR Ian",
-    avatar: IMGS[`${fsPreFix}_dprian.jpg`].default,
+    text: "DPR Ian",
+    icon: IMGS[`${fsPreFix}_dprian.jpg`].default,
   },
   {
-    user: "Frank Ocean",
-    avatar: IMGS[`${fsPreFix}_frankocean.png`].default,
+    text: "Frank Ocean",
+    icon: IMGS[`${fsPreFix}_frankocean.png`].default,
   },
   {
-    user: "G-Dragon",
-    avatar: IMGS[`${fsPreFix}_gd.jpg`].default,
+    text: "G-Dragon",
+    icon: IMGS[`${fsPreFix}_gd.jpg`].default,
   },
   {
-    user: "Joji",
-    avatar: IMGS[`${fsPreFix}_joji.jpg`].default,
+    text: "Joji",
+    icon: IMGS[`${fsPreFix}_joji.jpg`].default,
   },
   {
-    user: "Kid Milli",
-    avatar: IMGS[`${fsPreFix}_kidmilli.jpg`].default,
+    text: "Kid Milli",
+    icon: IMGS[`${fsPreFix}_kidmilli.jpg`].default,
   },
   {
-    user: "Killua",
-    avatar: IMGS[`${fsPreFix}_killua.jpg`].default,
+    text: "Killua",
+    icon: IMGS[`${fsPreFix}_killua.jpg`].default,
   },
   {
-    user: "Rich Brian",
-    avatar: IMGS[`${fsPreFix}_richbrian.jpg`].default,
+    text: "Rich Brian",
+    icon: IMGS[`${fsPreFix}_richbrian.jpg`].default,
   },
   {
-    user: "Somi",
-    avatar: IMGS[`${fsPreFix}_somi.jpg`].default,
+    text: "Somi",
+    icon: IMGS[`${fsPreFix}_somi.jpg`].default,
   },
   {
-    user: "The Weeknd",
-    avatar: IMGS[`${fsPreFix}_theweeknd.jpg`].default,
+    text: "The Weeknd",
+    icon: IMGS[`${fsPreFix}_theweeknd.jpg`].default,
   },
   {
-    user: "Thomas Shelby",
-    avatar: IMGS[`${fsPreFix}_shelby.jpg`].default,
+    text: "Thomas Shelby",
+    icon: IMGS[`${fsPreFix}_shelby.jpg`].default,
+  },
+  {
+    text: "Baifern",
+    icon: IMGS[`${fsPreFix}_baifern.jpg`].default,
+  },
+  {
+    text: "Davika",
+    icon: IMGS[`${fsPreFix}_davika.jpg`].default,
+  },
+  {
+    text: "Mario",
+    icon: IMGS[`${fsPreFix}_mario.jpg`].default,
+  },
+  {
+    text: "Oh Hyuk",
+    icon: IMGS[`${fsPreFix}_ohhyuk.jpg`].default,
+  },
+  {
+    text: "Pimtha",
+    icon: IMGS[`${fsPreFix}_pimtha.jpg`].default,
   },
 ];

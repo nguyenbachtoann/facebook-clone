@@ -1,13 +1,13 @@
 import React from "react";
-import { Avatar } from "@material-ui/core";
+import PropTypes from "prop-types";
 
-const online = (onlineDotSize) => {
+const online = (size) => {
   return {
     display: "inline-flex",
-    height: onlineDotSize,
-    width: onlineDotSize,
+    height: `calc(${size}px / 5)`,
+    width: `calc(${size}px / 5)`,
     right: 0,
-    bottom: -1,
+    bottom: 2,
     borderRadius: "50%",
     border: "2px solid white",
     backgroundColor: "#30a24c",
@@ -15,20 +15,44 @@ const online = (onlineDotSize) => {
   };
 };
 
-function OnlineUser({ src, size, onlineDotSize, dotStyles, className, title }) {
+const wrapper = (size) => {
+  return {
+    position: "relative",
+    width: size,
+    height: size,
+    borderRadius: "50%",
+  };
+};
+
+function OnlineUser({ src, size, className, title, style }) {
   return (
     <div className={className}>
       <div style={{ position: "relative" }}>
-        <Avatar
-          className="online-user-avatar"
+        <img
           src={src}
-          sizes={`${size}`}
-          title={title}
+          alt={title}
+          style={{ ...wrapper(size), ...style }}
+          className="online-user-avatar"
         />
-        <span style={{ ...online(onlineDotSize), ...dotStyles }} />
+        <span style={{ ...online(size) }} />
       </div>
     </div>
   );
 }
+
+OnlineUser.defaultProps = {
+  size: 20,
+  color: "#000000",
+  style: {},
+  className: "",
+};
+
+OnlineUser.propTypes = {
+  size: PropTypes.number,
+  src: PropTypes.string.isRequired,
+  style: PropTypes.object,
+  className: PropTypes.string,
+  title: PropTypes.string,
+};
 
 export { OnlineUser };
