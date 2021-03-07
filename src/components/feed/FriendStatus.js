@@ -1,5 +1,11 @@
 import React, { useState } from "react";
-import { OnlineUser, Icon, TooltipInner, StyledTooltip } from "../common";
+import {
+  OnlineUser,
+  Icon,
+  TooltipInner,
+  StyledTooltip,
+  popperProps,
+} from "../common";
 import { TEXTS, ONLINE_FRIENDS } from "./Constants";
 import { I_FS_GO_PREV, I_FS_GO_NEXT } from "../../assets/images/svg";
 import { iconSecondaryColor } from "../../styles/style";
@@ -44,18 +50,7 @@ function FriendStatus() {
             <StyledTooltip
               key={i}
               title={TooltipInner(TEXTS.friendStatusSendGreeting, item.text)}
-              PopperProps={{
-                disablePortal: true,
-                popperOptions: {
-                  positionFixed: true,
-                  modifiers: {
-                    preventOverflow: {
-                      enabled: true,
-                      boundariesElement: "window", // where "window" is the boundary
-                    },
-                  },
-                },
-              }}
+              PopperProps={popperProps}
             >
               <div>
                 <OnlineUser

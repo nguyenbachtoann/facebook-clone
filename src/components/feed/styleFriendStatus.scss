@@ -30,7 +30,7 @@
     .friend-status {
       &__create-meeting {
         @include center;
-        min-width: 185px;
+        min-width: 150px;
         border: 2px solid $btn-create-meeting;
         border-radius: 20px;
         margin: 0 16px;

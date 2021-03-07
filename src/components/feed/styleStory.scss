@@ -86,7 +86,7 @@
         .story__item-owner {
           @include width-height(111px, 200px);
           &-create {
-            @include width-height(100%, 25%);
+            @include width-height(100%, 35%);
             @include flex-position(center, center);
             @include border-radius-bottom-lr(10px);
             position: relative;
@@ -108,12 +108,14 @@
             }
             &-text {
               @include font-style-min($text-content-size, 600);
+              width: 70px;
+              text-align: center;
               margin-top: 18px;
             }
           }
           &-avatar {
             &-wrapper {
-              @include width-height(100%, 75%);
+              @include width-height(100%, 65%);
               position: relative;
               overflow: hidden;
             }

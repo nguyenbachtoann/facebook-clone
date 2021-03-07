@@ -13,7 +13,7 @@ import {
 import { iconSecondaryColor, btnPrimaryBgColor } from "../../styles/style";
 
 export const TEXTS = {
-  texSearch: "Tìm kiếm trên Facebook",
+  texSearch: "Search Facebook",
 };
 
 export const MENU_INFO = [

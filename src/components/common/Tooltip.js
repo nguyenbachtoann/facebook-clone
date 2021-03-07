@@ -19,6 +19,19 @@ const TooltipInner = (text, title) => (
   </div>
 );
 
+export const popperProps = {
+  disablePortal: true,
+  popperOptions: {
+    positionFixed: true,
+    modifiers: {
+      preventOverflow: {
+        enabled: true,
+        boundariesElement: "window", // where "window" is the boundary
+      },
+    },
+  },
+};
+
 TooltipInner.defaultProps = {
   title: "tool tip",
   text: null,

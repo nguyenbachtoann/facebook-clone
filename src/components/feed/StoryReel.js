@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { FEED_STORIES_INFO, TEXTS } from "./Constants";
+import { TooltipInner, StyledTooltip, popperProps } from "../common";
+
 import { Story } from "./Story";
 
 function StoryReel() {
@@ -29,9 +31,14 @@ function StoryReel() {
         </div>
         {FEED_STORIES_INFO &&
           FEED_STORIES_INFO.map((item, i) => <Story item={item} key={i} />)}
-        <div className="story-reel__go-btn" title={TEXTS.storyGo}>
-          <i className="story__go-btn-icon" title={TEXTS.storyGo} />
-        </div>
+        <StyledTooltip
+          title={TooltipInner(TEXTS.storyGo)}
+          PopperProps={popperProps}
+        >
+          <div className="story-reel__go-btn">
+            <i className="story__go-btn-icon" />
+          </div>
+        </StyledTooltip>
       </div>
     </div>
   );

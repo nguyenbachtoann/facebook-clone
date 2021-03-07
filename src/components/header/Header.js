@@ -1,7 +1,7 @@
-import React, { useState, useEffect, useContext } from "react";
+import React, { useState, useEffect } from "react";
 import "./style.scss";
 import { I_MESSENGER, I_NOTIFICATION } from "../../assets/images/svg";
-import { Icon, TooltipInner, StyledTooltip } from "../common";
+import { Icon, TooltipInner, StyledTooltip, popperProps } from "../common";
 import { LogoIcon } from "./LogoIcon";
 import { Avatar } from "@material-ui/core";
 import { TEXTS, MENU_INFO } from "./Constants";
@@ -79,7 +79,10 @@ function Header() {
                 }}
                 key={i}
               >
-                <StyledTooltip title={TooltipInner(item.title)}>
+                <StyledTooltip
+                  title={TooltipInner(item.title)}
+                  PopperProps={popperProps}
+                >
                   <a href="#">
                     <div
                       className={`header-middle__${item.wrapClassName}${
@@ -114,12 +117,15 @@ function Header() {
             <span>{profile && profile.first_name}</span>
           </div>
         </div>
-        <StyledTooltip title={TooltipInner("Create")}>
+        <StyledTooltip title={TooltipInner("Create")} PopperProps={popperProps}>
           <div className="header-right__create-btn">
             <i className="header-right__create-icon" />
           </div>
         </StyledTooltip>
-        <StyledTooltip title={TooltipInner("Messenger")}>
+        <StyledTooltip
+          title={TooltipInner("Messenger")}
+          PopperProps={popperProps}
+        >
           <div className="header-right__messenger-btn">
             <Icon
               className="header-right__messenger-icon"
@@ -128,7 +134,10 @@ function Header() {
             />
           </div>
         </StyledTooltip>
-        <StyledTooltip title={TooltipInner("Notification")}>
+        <StyledTooltip
+          title={TooltipInner("Notification")}
+          PopperProps={popperProps}
+        >
           <div className="header-right__notification-btn">
             <NotificationBadge
               component={NotificationWithBadge}
@@ -137,7 +146,10 @@ function Header() {
             />
           </div>
         </StyledTooltip>
-        <StyledTooltip title={TooltipInner("Account")}>
+        <StyledTooltip
+          title={TooltipInner("Account")}
+          PopperProps={popperProps}
+        >
           <div className="header-right__account-btn">
             <i className="header-right__account-icon" />
           </div>

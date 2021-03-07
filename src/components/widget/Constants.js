@@ -2,16 +2,16 @@ import { importAllImgs } from "../../helpers";
 const IMGS = importAllImgs();
 
 export const TEXTS = {
-  yourPageTitle: "Trang của bạn",
-  friendRequestTitle: "Lời mời kết bạn",
-  friendRequestSeeAll: "Xem tất cả",
-  btnConfirm: "Xác nhận",
-  btnDelete: "Xoá",
-  birthdayTitle: "Sinh nhật",
-  contactTitle: "Người liên hệ",
-  contactMeeting: "Phòng họp mặt mới",
-  contactSearch: "Tìm kiếm theo tên hoặc nhóm",
-  contactOptions: "Tuỳ chọn",
+  yourPageTitle: "Your Pages",
+  friendRequestTitle: "Friend Request",
+  friendRequestSeeAll: "See All",
+  btnConfirm: "Confirm",
+  btnDelete: "Delete",
+  birthdayTitle: "Birthday",
+  contactTitle: "Contact",
+  contactMeeting: "New room",
+  contactSearch: "Search by name or group",
+  contactOptions: "Options",
 };
 
 export const WIDGET_YOUR_PAGE_INFO = [
@@ -32,7 +32,7 @@ export const WIDGET_YOUR_PAGE_INFO = [
         iconClass: "your-page-messenger-icon",
         class: "your-page-item-icon",
         path: "/pages/beautiful-animal/messenger",
-        text: "1 Tin nhắn",
+        text: "1 Message",
         extraText: null,
       },
       {
@@ -44,7 +44,7 @@ export const WIDGET_YOUR_PAGE_INFO = [
         iconClass: "your-page-notification-icon",
         class: "your-page-item-icon",
         path: "/pages/beautiful-animal/notification",
-        text: "20+ Thông báo",
+        text: "20+ Notifications",
         extraText: null,
       },
       {
@@ -56,7 +56,7 @@ export const WIDGET_YOUR_PAGE_INFO = [
         iconClass: "your-page-create-ads-icon",
         class: "your-page-item-icon",
         path: "/pages/beautiful-animal/create-ads",
-        text: "Tạo quảng cáo",
+        text: "Create Promotion",
         extraText: null,
       },
     ],
@@ -69,7 +69,7 @@ export const FRIEND_REQUESTS = [
     user: "Travis Scott",
     avatar: IMGS["widget_travisscott.jpg"].default,
     iconClass: "friend-request-user-icon",
-    time: "2 giờ",
+    time: "2 hours",
   },
 ];
 
@@ -81,7 +81,7 @@ export const FRIEND_BIRTHDAY = [
     class: "birthday",
     path: "/birthday",
     people: ["Alien"],
-    text: "Hôm nay là sinh nhật của",
-    split: "và",
+    text: "Today is birthday of",
+    split: "and",
   },
 ];

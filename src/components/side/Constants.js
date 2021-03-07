@@ -3,27 +3,18 @@ import { importAllImgs } from "../../helpers";
 const IMGS = importAllImgs();
 
 export const TEXTS = {
-  showMore: "Xem thêm",
-  shortcutTitle: "Lối tắt của bạn",
-  shortcutEdit: "Chỉnh sửa",
+  showMore: "See More",
+  shortcutTitle: "Your Shortcuts",
+  shortcutEdit: "Edit",
 };
 export const SIDE_NAVIGATE_INFO = [
-  // {
-  //   title: "User",
-  //   icon: IMGS["avatar.jpg"].default,
-  //   iconClass: "user-icon",
-  //   class: "user",
-  //   path: "/toan.nguyenbach",
-  //   text: "Nguyễn Bách Toàn",
-  //   extraText: null,
-  // },
   {
     title: "Covid",
     icon: IMGS["covid.png"].default,
     iconClass: "covid-icon",
     class: "covid",
     path: "/coronavirus_info",
-    text: "(COVID-19) Trung tâm thông tin",
+    text: "COVID-19 Information Center",
     extraText: null,
   },
   {
@@ -32,7 +23,7 @@ export const SIDE_NAVIGATE_INFO = [
     iconClass: "friends-icon",
     class: "friends",
     path: "/friends",
-    text: "Bạn bè",
+    text: "Friends",
     extraText: null,
   },
   {
@@ -41,7 +32,7 @@ export const SIDE_NAVIGATE_INFO = [
     iconClass: "saved-icon",
     class: "saved",
     path: "/saved",
-    text: "Đã lưu",
+    text: "Saved",
     extraText: null,
   },
   {
@@ -50,8 +41,8 @@ export const SIDE_NAVIGATE_INFO = [
     iconClass: "groups-icon",
     class: "groups",
     path: "/groups",
-    text: "Nhóm",
-    extraText: "9+ nhóm mới",
+    text: "Groups",
+    extraText: "9+ new groups",
   },
 ];
 
@@ -134,7 +125,7 @@ export const SIDE_FOOTER_LINKS = [
       return (
         <span key={key}>
           <a href="#">
-            <span className={`${className}-text`}>Quyền riêng tư</span>
+            <span className={`${className}-text`}>Privacy</span>
           </a>
         </span>
       );
@@ -146,7 +137,7 @@ export const SIDE_FOOTER_LINKS = [
         <span key={key}>
           <span className={`${className}-dot`}>&middot;</span>
           <a href="#">
-            <span className={`${className}-text`}>Điều khoản</span>
+            <span className={`${className}-text`}>Terms</span>
           </a>
         </span>
       );
@@ -158,7 +149,7 @@ export const SIDE_FOOTER_LINKS = [
         <span key={key}>
           <span className={`${className}-dot`}>&middot;</span>
           <a href="#">
-            <span className={`${className}-text`}>Quảng cáo</span>
+            <span className={`${className}-text`}>Advertising</span>
           </a>
         </span>
       );
@@ -170,7 +161,7 @@ export const SIDE_FOOTER_LINKS = [
         <span key={key}>
           <span className={`${className}-dot`}>&middot;</span>
           <a href="#">
-            <span className={`${className}-text`}>Lựa chọn quảng cáo</span>
+            <span className={`${className}-text`}>Ad Choices</span>
             <span className={`${className}-text`}>
               <i className="side__footer-text-ads-choices-warning" />
             </span>
@@ -197,7 +188,7 @@ export const SIDE_FOOTER_LINKS = [
         <span key={key}>
           <span className={`${className}-dot`}>&middot;</span>
           <a href="#">
-            <span className={`${className}-text-more`}>Xem thêm</span>
+            <span className={`${className}-text-more`}>More</span>
           </a>
         </span>
       );

@@ -5,31 +5,31 @@ const strPreFix = "story";
 const fsPreFix = "friendstatus";
 
 export const TEXTS = {
-  storyGo: "Xem tất cả các tin",
-  createStory: "Tạo tin",
-  statusPlaceHolder: "ơi, bạn đang nghĩ gì thế?",
-  friendStatusCreateMeeting: "Tạo phòng họp mặt",
-  friendStatusSendGreeting: "Gửi lời chào",
+  storyGo: "See all stories",
+  createStory: "Create a Story",
+  statusPlaceHolder: "What's on your mind, ",
+  friendStatusCreateMeeting: "Create Room",
+  friendStatusSendGreeting: "Say Hi",
 };
 
 export const FEED_STORIES_INFO = [
   {
-    user: "Bơ",
+    user: "Rosé",
     avatar: IMGS[`${strPreFix}_roseavatar.jpg`].default,
     storyMedia: IMGS[`${strPreFix}_rosemedia.jpg`].default,
   },
   {
-    user: "Lía",
+    user: "Lisa",
     avatar: IMGS[`${strPreFix}_lisaavatar.jpg`].default,
     storyMedia: IMGS[`${strPreFix}_lisamedia.jpg`].default,
   },
   {
-    user: "Chi Chu",
+    user: "Jisoo",
     avatar: IMGS[`${strPreFix}_jisooavatar.jpg`].default,
     storyMedia: IMGS[`${strPreFix}_jisoomedia.jpg`].default,
   },
   {
-    user: "Chén Nì",
+    user: "Jennie",
     avatar: IMGS[`${strPreFix}_jennieavatar.jpg`].default,
     storyMedia: IMGS[`${strPreFix}_jenniemedia.jpg`].default,
   },
@@ -42,7 +42,7 @@ export const POST_ACTION_INFO = [
     iconPosition: "0 -357px",
     wrapClassName: "media",
     iconClassName: "media-icon",
-    text: "Ảnh/Video",
+    text: "Photo/Video",
   },
   {
     size: 24,
@@ -50,7 +50,7 @@ export const POST_ACTION_INFO = [
     iconPosition: "0 -307px",
     wrapClassName: "tagging",
     iconClassName: "tagging-icon",
-    text: "Gắn thẻ bạn bè",
+    text: "Tag Friends",
   },
   {
     size: 24,
@@ -58,7 +58,7 @@ export const POST_ACTION_INFO = [
     iconPosition: "0 -282px",
     wrapClassName: "emotion-activity",
     iconClassName: "emotion-activity-icon",
-    text: "Cảm xúc/Hoạt động",
+    text: "Feeling/Activity",
   },
 ];
 
@@ -72,19 +72,19 @@ export const ONLINE_FRIENDS = [
     icon: IMGS[`${fsPreFix}_dean.jpg`].default,
   },
   {
-    text: "Chi Chu",
+    text: "Jisoo",
     icon: IMGS[`${strPreFix}_jisooavatar.jpg`].default,
   },
   {
-    text: "Chén Nì",
+    text: "Jennies",
     icon: IMGS[`${strPreFix}_jennieavatar.jpg`].default,
   },
   {
-    text: "Bơ",
+    text: "Rosé",
     icon: IMGS[`${strPreFix}_roseavatar.jpg`].default,
   },
   {
-    text: "Lía",
+    text: "Lisa",
     icon: IMGS[`${strPreFix}_lisaavatar.jpg`].default,
   },
   {

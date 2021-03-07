@@ -41,7 +41,8 @@ function Status() {
           </div>
           <label className="status__label">
             <span>
-              {profile && profile.first_name} {TEXTS.statusPlaceHolder}
+              {TEXTS.statusPlaceHolder}
+              {profile && profile.first_name}?
             </span>
           </label>
         </div>
