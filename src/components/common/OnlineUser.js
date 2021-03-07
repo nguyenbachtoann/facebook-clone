@@ -21,6 +21,7 @@ const wrapper = (size) => {
     width: size,
     height: size,
     borderRadius: "50%",
+    objectFit: "cover",
   };
 };
 

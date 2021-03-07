@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from "react";
-import avatar from "../../assets/images/avatar.jpg";
+import React, { useState, useEffect, useContext } from "react";
 import "./style.scss";
 import { I_MESSENGER, I_NOTIFICATION } from "../../assets/images/svg";
 import { Icon, TooltipInner, StyledTooltip } from "../common";
@@ -9,21 +8,28 @@ import { TEXTS, MENU_INFO } from "./Constants";
 import { NotificationBadge, MenuBadge } from "./CustomBadge";
 
 function Header() {
+  const [profile, setProfile] = useState(null);
   const { texSearch } = TEXTS;
   const [HOME] = MENU_INFO;
   const [current, setCurrent] = useState(HOME.path);
+
+  const handleGetUser = () => {
+    const user = JSON.parse(localStorage.getItem("user"));
+    const { profile } = user.additionalUserInfo;
+    setProfile(profile);
+  };
 
   const handleChooseMenu = (path) => {
     localStorage.setItem("currentMenu", path);
     setCurrent(path);
   };
-
   const isCurrent = (item) => {
     return current === item;
   };
 
   useEffect(() => {
     setCurrent(localStorage.getItem("currentMenu"));
+    handleGetUser();
   }, [setCurrent, current]);
 
   const NotificationWithBadge = (
@@ -101,11 +107,11 @@ function Header() {
         <div className="header-right__avatar" title="Avatar">
           <div className="header-right__avatar-container">
             <Avatar
-              src={avatar}
+              src={profile && profile.picture.data.url}
               alt="Avatar"
               className="header-right__avatar-img"
             />
-            <span>Nguyễn</span>
+            <span>{profile && profile.first_name}</span>
           </div>
         </div>
         <StyledTooltip title={TooltipInner("Create")}>

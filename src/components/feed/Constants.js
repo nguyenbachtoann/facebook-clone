@@ -7,7 +7,7 @@ const fsPreFix = "friendstatus";
 export const TEXTS = {
   storyGo: "Xem tất cả các tin",
   createStory: "Tạo tin",
-  statusPlaceHolder: "Nguyễn ơi, bạn đang nghĩ gì thế?",
+  statusPlaceHolder: "ơi, bạn đang nghĩ gì thế?",
   friendStatusCreateMeeting: "Tạo phòng họp mặt",
   friendStatusSendGreeting: "Gửi lời chào",
 };

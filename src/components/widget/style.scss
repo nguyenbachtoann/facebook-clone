@@ -1,6 +1,14 @@
 @import "../../styles/variables";
 @import "../../styles/mixins";
 
+@mixin -widget-hover-change-bg {
+  @include width-height(30px, 30px);
+  @include center;
+  border-radius: 50%;
+  transition: all 0.3s ease-out;
+  @include hover-change-bg-ease($btn-secondary-hover-bg-highlight-color);
+}
+
 .widget {
   top: 56px;
   left: 75.6%;
@@ -234,7 +242,7 @@
     &-header {
       @include width-height(100%, auto);
       @include flex-position(unset, center);
-      margin-bottom: 10px;
+      margin-bottom: 7px;
       .contact-header {
         &__title {
           @include font-style-min(
@@ -243,7 +251,62 @@
             $text-content-header-color
           );
           padding-left: 7px;
-          flex: 0.7;
+          flex: 0.67;
+        }
+
+        &__actions {
+          @include flex-position(space-between, center);
+          flex: 0.33;
+          .contact__actions {
+            &-meeting {
+              @include -widget-hover-change-bg;
+              @include width-height(30px, 30px);
+              @include center;
+              &-icon {
+                @include option-btn-png(
+                  $imgSetting6,
+                  0,
+                  -66px,
+                  25px,
+                  114px,
+                  16px
+                );
+                @include secondary-icon-filter;
+              }
+            }
+            &-search {
+              @include -widget-hover-change-bg;
+              @include width-height(30px, 30px);
+              @include center;
+              &-icon {
+                @include option-btn-png(
+                  $imgSetting1,
+                  0,
+                  -836px,
+                  25px,
+                  1067px,
+                  16px
+                );
+                @include secondary-icon-filter;
+              }
+            }
+            &-options {
+              @include -widget-hover-change-bg;
+              @include width-height(30px, 30px);
+              @include center;
+              &-icon {
+                @include option-btn-png(
+                  $imgSetting1,
+                  0,
+                  -818px,
+                  25px,
+                  1067px,
+                  16px
+                );
+                @include secondary-icon-filter;
+              }
+            }
+          }
         }
       }
     }

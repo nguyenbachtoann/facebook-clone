@@ -1,5 +1,4 @@
-import React from "react";
-import avatar from "../../assets/images/avatar.jpg";
+import React, { useState, useEffect } from "react";
 import { Avatar } from "@material-ui/core";
 import { TEXTS, POST_ACTION_INFO } from "./Constants";
 
@@ -18,20 +17,32 @@ const statusIconStyle = (item) => {
 };
 
 function Status() {
+  const [profile, setProfile] = useState(null);
+  const handleGetUser = () => {
+    const user = JSON.parse(localStorage.getItem("user"));
+    const { profile } = user.additionalUserInfo;
+    setProfile(profile);
+  };
+
+  useEffect(() => {
+    handleGetUser();
+  }, []);
   return (
     <div className="feed__status">
       <div className="feed__status-wrapper">
         <div className="status__action-wrapper">
           <div className="status__avatar-wrapper">
             <Avatar
-              src={avatar}
+              src={profile && profile.picture.data.url}
               sizes="40"
               alt="Avatar"
               className="status__avatar"
             />
           </div>
           <label className="status__label">
-            <span>{TEXTS.statusPlaceHolder}</span>
+            <span>
+              {profile && profile.first_name} {TEXTS.statusPlaceHolder}
+            </span>
           </label>
         </div>
         <Divider />

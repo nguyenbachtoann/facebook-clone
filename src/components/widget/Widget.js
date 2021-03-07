@@ -8,6 +8,7 @@ import {
 } from "./Constants";
 import { ONLINE_FRIENDS } from "../feed/Constants";
 import { Option, OptionFriendRequest, OptionBirthday } from "./Option";
+import { StyledTooltip, TooltipInner } from "../common/Tooltip";
 
 const Divider = () => <div className="widget__divider divider" />;
 
@@ -66,7 +67,23 @@ function Widget() {
       <div className="widget__contact">
         <div className="widget__contact-header">
           <span className="contact-header__title">{TEXTS.contactTitle}</span>
-          <div className="contact-header__actions"></div>
+          <div className="contact-header__actions">
+            <StyledTooltip title={TooltipInner(TEXTS.contactMeeting)}>
+              <div className="contact__action contact__actions-meeting">
+                <i className="contact__actions-meeting-icon" />
+              </div>
+            </StyledTooltip>
+            <StyledTooltip title={TooltipInner(TEXTS.contactSearch)}>
+              <div className="contact__action contact__actions-search">
+                <i className="contact__actions-search-icon" />
+              </div>
+            </StyledTooltip>
+            <StyledTooltip title={TooltipInner(TEXTS.contactOptions)}>
+              <div className="contact__action contact__actions-options">
+                <i className="contact__actions-options-icon" />
+              </div>
+            </StyledTooltip>
+          </div>
         </div>
         {ONLINE_FRIENDS &&
           ONLINE_FRIENDS.map((item, i) => (

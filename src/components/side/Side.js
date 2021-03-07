@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext, useState, useEffect } from "react";
 import "./style.scss";
 import {
   SIDE_FOOTER_LINKS,
@@ -24,9 +24,39 @@ const OptionMore = () => (
 const Divider = () => <div className="side__divider divider" />;
 
 function Side() {
+  const [profile, setProfile] = useState(null);
+  const handleGetUser = () => {
+    const user = JSON.parse(localStorage.getItem("user"));
+    const { profile } = user.additionalUserInfo;
+    setProfile(profile);
+  };
+  const userOpt = () => {
+    let option = {
+      title: "User",
+      icon: undefined,
+      iconClass: "user-icon",
+      class: "user",
+      path: "/toan.nguyenbach",
+      text: undefined,
+      extraText: null,
+    };
+    option = {
+      ...option,
+      icon: profile && profile.picture.data.url,
+      text: profile && profile.name,
+    };
+    return option;
+  };
+
+  useEffect(() => {
+    setProfile(localStorage.getItem("user").additionalUserInfo);
+    handleGetUser();
+  }, [setProfile]);
+
   return (
     <div className="side">
       <div className="side__navigate">
+        <SideOption item={userOpt()} />
         {SIDE_NAVIGATE_INFO &&
           SIDE_NAVIGATE_INFO.map((item, i) => (
             <SideOption item={item} key={i} />

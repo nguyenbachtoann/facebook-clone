@@ -9,6 +9,9 @@ export const TEXTS = {
   btnDelete: "Xoá",
   birthdayTitle: "Sinh nhật",
   contactTitle: "Người liên hệ",
+  contactMeeting: "Phòng họp mặt mới",
+  contactSearch: "Tìm kiếm theo tên hoặc nhóm",
+  contactOptions: "Tuỳ chọn",
 };
 
 export const WIDGET_YOUR_PAGE_INFO = [
@@ -63,8 +66,8 @@ export const WIDGET_YOUR_PAGE_INFO = [
 
 export const FRIEND_REQUESTS = [
   {
-    user: "Choi Seung-hyun",
-    avatar: IMGS["widget_top.jpg"].default,
+    user: "Travis Scott",
+    avatar: IMGS["widget_travisscott.jpg"].default,
     iconClass: "friend-request-user-icon",
     time: "2 giờ",
   },

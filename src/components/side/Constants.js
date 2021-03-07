@@ -8,15 +8,15 @@ export const TEXTS = {
   shortcutEdit: "Chỉnh sửa",
 };
 export const SIDE_NAVIGATE_INFO = [
-  {
-    title: "User",
-    icon: IMGS["avatar.jpg"].default,
-    iconClass: "user-icon",
-    class: "user",
-    path: "/toan.nguyenbach",
-    text: "Nguyễn Bách Toàn",
-    extraText: null,
-  },
+  // {
+  //   title: "User",
+  //   icon: IMGS["avatar.jpg"].default,
+  //   iconClass: "user-icon",
+  //   class: "user",
+  //   path: "/toan.nguyenbach",
+  //   text: "Nguyễn Bách Toàn",
+  //   extraText: null,
+  // },
   {
     title: "Covid",
     icon: IMGS["covid.png"].default,
