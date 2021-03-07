@@ -13,6 +13,7 @@ function SideOption({ item }) {
               className={`side__option-icon navigate-icon navigate-icon-${item.iconClass}`}
               src={item.icon}
               alt={item.title}
+              loading="lazy"
             />
           </div>
           <div className="side__option-text-wrapper navigate-text-wrapper">

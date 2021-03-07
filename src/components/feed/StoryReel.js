@@ -1,9 +1,13 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { FEED_STORIES_INFO, TEXTS } from "./Constants";
 import { Story } from "./Story";
-import avatar from "../../assets/images/avatar.jpg";
 
 function StoryReel() {
+  const [avatar, setAvatar] = useState(null);
+
+  useEffect(() => {
+    setAvatar(JSON.parse(localStorage.getItem("user")).avatar);
+  }, [avatar, setAvatar]);
   return (
     <div className="feed__story-reel">
       <div className="feed__story-reel-wrapper">

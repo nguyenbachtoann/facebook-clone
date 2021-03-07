@@ -10,6 +10,7 @@ const checkOnlineValue = (value, item) => {
       className={`widget__option-icon widget-icon-${item?.iconClass}`}
       src={item?.icon}
       alt={item?.title}
+      loading="lazy"
     />
   );
 };
@@ -76,6 +77,7 @@ function OptionFriendRequest({ item }) {
               className={`widget__option-icon widget-icon-${item.iconClass}`}
               src={item.avatar}
               alt={item.user}
+              loading="lazy"
             />
           </div>
           <div className={`widget__option-text-wrapper widget-text-wrapper`}>
@@ -116,6 +118,7 @@ function OptionBirthday({ item }) {
               className={`widget__option-icon widget-icon-${item.iconClass}`}
               src={item.icon}
               alt={item.title}
+              loading="lazy"
             />
           </div>
           <div className={`widget__option-text-wrapper widget-text-wrapper`}>
