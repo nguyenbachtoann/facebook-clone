@@ -89,12 +89,12 @@
             $text-content-header-color
           );
           padding-left: 7px;
-          flex: 0.85;
+          flex: 0.9;
         }
         &__actions {
           @include center;
           @include font-style-min(1.2rem, 700, $text-content-header-color);
-          flex: 0.15;
+          flex: 0.1;
           &-dots {
             // hover
             @include width-height(30px, 30px);
@@ -147,12 +147,12 @@
             $text-content-header-color
           );
           padding-left: 7px;
-          flex: 0.7;
+          flex: 0.8;
         }
         &__actions {
           @include center;
           @include font-style-min($text-content-size, 400, $text-link-color);
-          flex: 0.3;
+          flex: 0.2;
           height: 100%;
           border-radius: 8px;
           transition: all 0.3s ease-out;
@@ -175,10 +175,10 @@
             width: 100%;
             @include flex-position(space-around, center);
             span:nth-child(1) {
-              flex: 0.8;
+              flex: 0.9;
             }
             span:nth-child(2) {
-              flex: 0.2;
+              flex: 0.1;
               @include font-style-min($text-info-size, 400, $text-info-gray);
             }
           }
@@ -187,7 +187,7 @@
 
       &-confirmation-btn {
         @include flex-position(space-between, center);
-        width: 90%;
+        width: 95%;
         .widget__option {
           &-confirm-btn {
             @include action-button(

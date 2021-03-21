@@ -3,6 +3,7 @@ const IMGS = importAllImgs();
 
 const strPreFix = "story";
 const fsPreFix = "friendstatus";
+const postPrefix = "post";
 
 export const TEXTS = {
   storyGo: "See all stories",
@@ -172,8 +173,38 @@ export const POSTS = [
     profile: ONLINE_FRIENDS.find((p) => p.text === "Rosé"),
     timestamp: "6m",
     privacy: "Public",
-    text: 'Check this out: "ON THE GROUND" M/V. 🧚💝',
-    hyper: "https://youtu.be/CKZvWhCqx1s",
+    content: [
+      {
+        type: "text",
+        data: 'Check this out: "ON THE GROUND" M/V. 🧚💝',
+      },
+      {
+        type: "link",
+        data: "https://youtu.be/CKZvWhCqx1s",
+      },
+      {
+        type: "tag",
+        data: [
+          {
+            placeholder: "ONTHEGROUND",
+            link: "https://youtu.be/CKZvWhCqx1s",
+          },
+          {
+            placeholder: "ROSÉ",
+            link: "https://youtu.be/CKZvWhCqx1s",
+          },
+        ],
+      },
+      {
+        type: "image",
+        data: [
+          {
+            src: IMGS[`${postPrefix}_rose.jpg`].default,
+            alt: "rose",
+          },
+        ],
+      },
+    ],
   },
   {
     id: 2,
@@ -181,7 +212,24 @@ export const POSTS = [
     profile: ONLINE_FRIENDS.find((p) => p.text === "Clairo"),
     timestamp: "7m",
     privacy: "Public",
-    text: 'Old one: "Pretty Girl". 🌼',
-    hyper: "https://youtu.be/mngtcfcaVrI",
+    content: [
+      {
+        type: "text",
+        data: 'Old one: "Pretty Girl". 🌼',
+      },
+      {
+        type: "link",
+        data: "https://youtu.be/mngtcfcaVrI",
+      },
+      {
+        type: "image",
+        data: [
+          {
+            src: IMGS[`${postPrefix}_clairo.jpg`].default,
+            alt: "clairo",
+          },
+        ],
+      },
+    ],
   },
 ];

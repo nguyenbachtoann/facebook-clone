@@ -3,7 +3,7 @@ const IMGS = importAllImgs();
 
 export const TEXTS = {
   yourPageTitle: "Your Pages",
-  friendRequestTitle: "Friend Request",
+  friendRequestTitle: "Friend Requests",
   friendRequestSeeAll: "See All",
   btnConfirm: "Confirm",
   btnDelete: "Delete",
@@ -69,7 +69,7 @@ export const FRIEND_REQUESTS = [
     user: "Travis Scott",
     avatar: IMGS["widget_travisscott.jpg"].default,
     iconClass: "friend-request-user-icon",
-    time: "2 hours",
+    time: "2h",
   },
 ];
 

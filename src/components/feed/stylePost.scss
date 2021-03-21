@@ -1,0 +1,83 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+@import "./style.scss";
+@import "../widget/style.scss";
+
+.post {
+  &__item {
+    @include width-height(500px, auto);
+    @include flex-position(flex-start, unset);
+    @include flex-column;
+    @include box-shadow;
+    margin-top: 18px;
+    border-radius: 8px;
+    background-color: white;
+    position: relative;
+    padding-bottom: 18px;
+    &-metadata {
+      @include width-height(500px, auto);
+      @include flex-position(flex-start, unset);
+      border-radius: 8px;
+    }
+    &-content {
+      margin-top: 5px;
+      @include font-style-min($text-content-size, 400);
+      line-height: 1.2rem;
+      a {
+        color: $text-link-color;
+      }
+    }
+  }
+  &__avatar-wrapper {
+    margin: 12px 8px 0 16px;
+  }
+  &__user-meta-wrapper {
+    @include flex-column;
+    height: 35px;
+    margin-top: 12px;
+    flex: 0.88;
+    .post {
+      &__username {
+        @include font-style-min($text-content-size, 600);
+        white-space: nowrap;
+      }
+      &__privacy {
+        @include flex-position(flex-start, center);
+        @include font-style-min($text-info-size, 400, $text-info-gray);
+        span {
+          margin-right: 3px;
+        }
+        &-icon {
+          @include option-btn-png($imgSetting7, 0, -592px, 25px, 696px, 12px);
+          @include secondary-icon-filter;
+        }
+      }
+    }
+  }
+
+  &__actions {
+    @include center;
+    @include font-style-min(1.2rem, 800, $text-content-header-color);
+    flex: 0.1;
+    &-dots {
+      // hover
+      @include width-height(35px, 35px);
+      @include center;
+      border-radius: 50%;
+      transition: all 0.3s ease-out;
+      @include hover-change-bg-ease($btn-secondary-hover-bg-highlight-color);
+    }
+  }
+
+  &__status {
+    padding: 0 16px;
+  }
+
+  &__images {
+    margin-top: 12px;
+    display: flex;
+    img {
+      @include width-height-100;
+    }
+  }
+}

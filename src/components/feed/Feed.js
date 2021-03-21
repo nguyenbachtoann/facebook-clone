@@ -3,6 +3,7 @@ import "./style.scss";
 import "./styleStory.scss";
 import "./styleStatus.scss";
 import "./styleFriendStatus.scss";
+import "./stylePost.scss";
 import { StoryReel } from "./StoryReel";
 import { Status } from "./Status";
 import { FriendStatus } from "./FriendStatus";

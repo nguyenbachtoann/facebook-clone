@@ -20,6 +20,11 @@ function importAllImgs() {
     false,
     /\.(png|jpe?g|svg)$/
   );
+  const rPost = require.context(
+    "../assets/images/feed/post",
+    false,
+    /\.(png|jpe?g|svg)$/
+  );
   let images = {};
   r.keys().forEach((item) => {
     images[item.replace("./", "")] = r(item);
@@ -35,6 +40,9 @@ function importAllImgs() {
   });
   rWidget.keys().forEach((item) => {
     images[item.replace("./", "")] = rWidget(item);
+  });
+  rPost.keys().forEach((item) => {
+    images[item.replace("./", "")] = rPost(item);
   });
   return images;
 }
