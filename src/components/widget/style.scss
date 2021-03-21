@@ -9,13 +9,20 @@
   @include hover-change-bg-ease($btn-secondary-hover-bg-highlight-color);
 }
 
+@mixin action-button($txtSize, $txtWei, $txtColor, $bgColor) {
+  @include font-style-min($txtSize, $txtWei, $txtColor);
+  @include center;
+  background-color: $bgColor;
+  height: 37px;
+  border-radius: 8px;
+}
+
 .widget {
   top: 56px;
   left: 75.6%;
   bottom: 0;
   position: fixed;
   padding: 16px 14px 6px 9px;
-  overflow: hidden;
   transition: all 0.3s ease-out;
   &:hover {
     overflow-y: overlay;
@@ -183,19 +190,21 @@
         width: 90%;
         .widget__option {
           &-confirm-btn {
-            @include font-style-min($text-content-size, 600, white);
-            @include center;
-            background-color: $btn-primary-bg-color;
-            height: 37px;
-            border-radius: 8px;
+            @include action-button(
+              $text-content-size,
+              600,
+              white,
+              $btn-primary-bg-color
+            );
             flex: 0.48;
           }
           &-delete-btn {
-            @include font-style-min($text-content-size, 600, black);
-            @include center;
-            background-color: $btn-third-bg-color;
-            height: 37px;
-            border-radius: 8px;
+            @include action-button(
+              $text-content-size,
+              600,
+              black,
+              $btn-third-bg-color
+            );
             flex: 0.48;
           }
         }

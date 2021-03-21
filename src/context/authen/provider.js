@@ -1,12 +1,12 @@
-import React, { createContext, useState, useEffect } from "react";
-import { useLogin } from "./reducerHooks";
+import React, { createContext, useState } from "react";
+import { useLoginSuccess } from "./reducerHooks";
 
 const AuthContext = createContext();
 
 const AuthProvider = ({ children }) => {
   const [isLogged, setIsLogged] = useState(false);
 
-  const [userInfo, login] = useLogin();
+  const [userInfo, loginSuccess] = useLoginSuccess();
 
   const checkAuth = () => {
     const user = localStorage.getItem("user");
@@ -18,7 +18,9 @@ const AuthProvider = ({ children }) => {
   };
 
   return (
-    <AuthContext.Provider value={{ isLogged, login, userInfo, checkAuth }}>
+    <AuthContext.Provider
+      value={{ isLogged, loginSuccess, userInfo, checkAuth }}
+    >
       {children}
     </AuthContext.Provider>
   );

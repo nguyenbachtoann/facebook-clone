@@ -10,17 +10,17 @@
     margin-top: 18px;
     border-radius: 8px;
     background-color: white;
-    overflow-x: auto;
-    overflow-y: hidden;
     position: relative;
-    // * Firefox *
-    scrollbar-width: none;
-    &::-webkit-scrollbar {
-      @include width-height(0px, 0px);
-    }
     &-wrapper {
       @include flex-row;
       width: 500px;
+      overflow-x: auto;
+      overflow-y: hidden;
+      // * Firefox *
+      scrollbar-width: none;
+      &::-webkit-scrollbar {
+        @include width-height(0px, 0px);
+      }
       &:after {
         content: "";
         display: block;
@@ -50,13 +50,13 @@
       }
       &__go-next {
         @include navigate-btn;
-        position: fixed;
-        margin-left: 420px;
+        position: absolute;
+        right: 10px;
       }
       &__go-prev {
         @include navigate-btn;
-        position: fixed;
-        margin-left: -420px;
+        position: absolute;
+        left: 10px;
       }
     }
     .online-user-wrapper {

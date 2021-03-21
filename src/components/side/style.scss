@@ -8,7 +8,6 @@
 
 .side {
   padding: 16px 14px 6px 9px;
-  overflow: hidden;
   top: 56px;
   bottom: 0;
   position: fixed;
@@ -19,7 +18,6 @@
     overflow-x: hidden;
     transition: all 0.1s ease-in;
   }
-
   // for all
   &__option {
     border-radius: 8px;

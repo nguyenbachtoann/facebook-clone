@@ -33,3 +33,6 @@ export const I_FS_GO_PREV =
   "m12.2 4.53-5.473 5.47 5.47 5.47a.75.75 0 0 1 -1.061 1.06l-6-6a.751.751 0 0 1 0-1.06l6-6a.75.75 0 1 1 1.064 1.06z";
 export const I_FS_GO_NEXT =
   "m7.8 4.53 5.473 5.47-5.473 5.47a.75.75 0 0 0 1.061 1.06l6-6a.751.751 0 0 0 0-1.06l-6-6a.75.75 0 0 0 -1.061 1.06z";
+
+export const FACEBOOK_LOGO_TEXT =
+  "https://static.xx.fbcdn.net/rsrc.php/y8/r/dF5SId3UHWd.svg";

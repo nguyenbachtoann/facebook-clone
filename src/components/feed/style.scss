@@ -14,10 +14,10 @@
 }
 
 .feed {
-  top: 56px;
+  // top: 56px;
   left: 24.6%;
   bottom: 0;
-  position: fixed;
+  position: relative;
   // -------------
   &__wrapper {
     @include width-height-100;

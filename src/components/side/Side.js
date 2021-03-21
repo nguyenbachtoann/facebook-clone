@@ -55,32 +55,36 @@ function Side() {
 
   return (
     <div className="side">
-      <div className="side__navigate">
-        <SideOption item={userOpt()} />
-        {SIDE_NAVIGATE_INFO &&
-          SIDE_NAVIGATE_INFO.map((item, i) => (
-            <SideOption item={item} key={i} />
-          ))}
-        <OptionMore />
-      </div>
-      <Divider />
-      <div className="side__shortcut">
-        <div className="side__shortcut-header">
-          <span className="shortcut-header__title">{TEXTS.shortcutTitle}</span>
-          <div className="shortcut-header__actions">
-            <span>{TEXTS.shortcutEdit}</span>
-          </div>
+      <div className="side__wrapper">
+        <div className="side__navigate">
+          <SideOption item={userOpt()} />
+          {SIDE_NAVIGATE_INFO &&
+            SIDE_NAVIGATE_INFO.map((item, i) => (
+              <SideOption item={item} key={i} />
+            ))}
+          <OptionMore />
         </div>
-        {SIDE_SHORTCUT_INFO &&
-          SIDE_SHORTCUT_INFO.map((item, i) => (
-            <SideOption item={item} key={i} />
-          ))}
-        <OptionMore />
-      </div>
-      <div className="side__footer">
-        <div className="side__footer-wrapper">
-          {SIDE_FOOTER_LINKS &&
-            SIDE_FOOTER_LINKS.map((item, i) => item.data(i, "side__footer"))}
+        <Divider />
+        <div className="side__shortcut">
+          <div className="side__shortcut-header">
+            <span className="shortcut-header__title">
+              {TEXTS.shortcutTitle}
+            </span>
+            <div className="shortcut-header__actions">
+              <span>{TEXTS.shortcutEdit}</span>
+            </div>
+          </div>
+          {SIDE_SHORTCUT_INFO &&
+            SIDE_SHORTCUT_INFO.map((item, i) => (
+              <SideOption item={item} key={i} />
+            ))}
+          <OptionMore />
+        </div>
+        <div className="side__footer">
+          <div className="side__footer-wrapper">
+            {SIDE_FOOTER_LINKS &&
+              SIDE_FOOTER_LINKS.map((item, i) => item.data(i, "side__footer"))}
+          </div>
         </div>
       </div>
     </div>

@@ -5,9 +5,12 @@ import { AuthContext } from "./context";
 
 function App() {
   const authContext = useContext(AuthContext);
-  const { isLogged, checkAuth } = authContext;
+  const { isLogged, checkAuth, userInfor } = authContext;
   const [HOME] = MENU_INFO;
 
+  const getLocalUser = () => {
+    return localStorage.getItem("user");
+  };
   useEffect(() => {
     checkAuth();
     const getCurrentMenu = () => {
@@ -28,7 +31,7 @@ function App() {
             <Widget />
           </div>
         </>
-      ) : (
+      ) : getLocalUser() ? null : (
         <Login />
       )}
     </div>

@@ -164,3 +164,24 @@ export const ONLINE_FRIENDS = [
     icon: IMGS[`${fsPreFix}_pimtha.jpg`].default,
   },
 ];
+
+export const POSTS = [
+  {
+    id: 1,
+    user: "Rosé",
+    profile: ONLINE_FRIENDS.find((p) => p.text === "Rosé"),
+    timestamp: "6m",
+    privacy: "Public",
+    text: 'Check this out: "ON THE GROUND" M/V. 🧚💝',
+    hyper: "https://youtu.be/CKZvWhCqx1s",
+  },
+  {
+    id: 2,
+    user: "Clairo",
+    profile: ONLINE_FRIENDS.find((p) => p.text === "Clairo"),
+    timestamp: "7m",
+    privacy: "Public",
+    text: 'Old one: "Pretty Girl". 🌼',
+    hyper: "https://youtu.be/mngtcfcaVrI",
+  },
+];

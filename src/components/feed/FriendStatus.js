@@ -37,8 +37,8 @@ function FriendStatus() {
   };
 
   return (
-    <div className="feed__friend-status" onScroll={showNavigate}>
-      <div className="feed__friend-status-wrapper">
+    <div className="feed__friend-status">
+      <div className="feed__friend-status-wrapper" onScroll={showNavigate}>
         <div className="friend-status__create-meeting">
           <div className="create-meeting__btn">
             <i className="create-meeting__btn-icon" />

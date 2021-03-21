@@ -1,0 +1,51 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
+@media screen and (min-width: 320px) {
+  .login {
+    &__button {
+      width: 220px;
+    }
+    .auth-description {
+      margin-top: 30px;
+      span {
+        @include font-style-min(14px, 300, $text-content-header-color);
+      }
+      a {
+        @include font-style-min(14px, 300, $text-link-color);
+      }
+    }
+  }
+}
+@media screen and (min-width: 375px) {
+  .login {
+    &__button {
+      width: 230px;
+    }
+    .auth-description {
+      margin-top: 30px;
+      span {
+        @include font-style-min(14px, 300, $text-content-header-color);
+      }
+      a {
+        @include font-style-min(14px, 300, $text-link-color);
+      }
+    }
+  }
+}
+@media screen and (min-width: 425px) {
+  .login {
+    &__button {
+      width: 240px;
+    }
+    .auth-description {
+      margin-top: 30px;
+      span {
+        @include font-style-min(14px, 300, $text-content-header-color);
+      }
+      a {
+        @include font-style-min(14px, 300, $text-link-color);
+      }
+    }
+  }
+}

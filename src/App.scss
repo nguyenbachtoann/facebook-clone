@@ -2,6 +2,8 @@
 @import "./styles/mixins";
 
 #app {
+  @include width-height-100;
+  background-color: $app-bg-color;
   &__body {
     .side {
       width: 23%;
@@ -13,7 +15,7 @@
       background-color: $app-bg-color;
     }
     .widget {
-      width: 23%;
+      width: 22.7%;
       background-color: $app-bg-color;
     }
   }

@@ -1,22 +1,20 @@
 import { useReducer } from "react";
 import reducer, { initialState } from "./reducer";
-import { firebaseAuth, facebookProvider } from "../../configs";
+import { firebaseAuth } from "../../configs";
 import { loginLoading, loginSuccess, loginFailed } from "./actions";
 import axios from "axios";
 
-export const useLogin = () => {
+export const useLoginSuccess = () => {
   const [state, dispatch] = useReducer(reducer, initialState);
   const makeRequest = () => {
-    dispatch(loginLoading);
+    dispatch(loginLoading());
     firebaseAuth
-      .signInWithPopup(facebookProvider)
+      .getRedirectResult()
       .then(async (r) => {
         const token = r.credential.accessToken;
         const photoUrl = `${r.user.photoURL}?width=960&height=960&access_token=${token}`;
-        const avatarUrl = await fetchAvatarFBGraph(photoUrl);
-        console.log("ava: ", avatarUrl);
-        r = { ...r, avatar: avatarUrl };
-        console.log("user", r);
+        const avatar = await fetchAvatarFBGraph(photoUrl);
+        r = { ...r, avatar };
         dispatch(loginSuccess(r));
         localStorage.setItem("user", JSON.stringify(r));
       })

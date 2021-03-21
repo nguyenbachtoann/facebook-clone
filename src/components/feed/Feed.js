@@ -10,8 +10,11 @@ import { Post } from "./Post";
 
 function Feed() {
   return (
-    <div className="feed">
-      <div className="feed__wrapper">
+    <div className="feed" style={{ paddingBottom: 100 }}>
+      <div
+        className="feed__wrapper"
+        style={{ paddingBottom: 100, width: "100%" }}
+      >
         <StoryReel />
         <Status />
         <FriendStatus />
