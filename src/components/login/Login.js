@@ -4,6 +4,7 @@ import { FACEBOOK_LOGO_TEXT } from "../../assets/images/svg";
 import { firebaseAuth, facebookProvider } from "../../configs";
 import { makeStyles } from "@material-ui/core/styles";
 import CircularProgress from "@material-ui/core/CircularProgress";
+import Zoom from "@material-ui/core/Zoom";
 import "./style.scss";
 import "./responsiveStyle.scss";
 
@@ -24,6 +25,17 @@ const useStylesFacebook = makeStyles((theme) => ({
     strokeLinecap: "round",
   },
 }));
+
+const displayNone = {
+  opacity: 0,
+  visibility: "hidden",
+  transition: "all 0.2s ease-out",
+};
+const displayFlex = {
+  opacity: 1,
+  visibility: "visible",
+  transition: "all 0.2s ease-in",
+};
 
 function Login() {
   const classes = useStylesFacebook();
@@ -50,27 +62,32 @@ function Login() {
             Login
           </button>
         </div>
-        {userInfo?.status === "LOGIN_LOADING" && (
-          <div className={`${classes.root} login__loading`}>
-            <CircularProgress
-              variant="determinate"
-              className={classes.bottom}
-              size={40}
-              thickness={4}
-              value={100}
-            />
-            <CircularProgress
-              variant="indeterminate"
-              disableShrink
-              className={classes.top}
-              classes={{
-                circle: classes.circle,
-              }}
-              size={40}
-              thickness={4}
-            />
-          </div>
-        )}
+
+        <div
+          className={`${classes.root} login__loading`}
+          style={
+            userInfo?.status === "LOGIN_LOADING" ? displayFlex : displayNone
+          }
+        >
+          <CircularProgress
+            variant="determinate"
+            className={classes.bottom}
+            size={40}
+            thickness={4}
+            value={100}
+          />
+          <CircularProgress
+            variant="indeterminate"
+            disableShrink
+            className={classes.top}
+            classes={{
+              circle: classes.circle,
+            }}
+            size={40}
+            thickness={4}
+          />
+        </div>
+
         <div className="login__description auth-description">
           <span>Authentication was powered by</span>
           <span>&nbsp;</span>

@@ -54,10 +54,9 @@
   }
 
   &__loading {
-    margin-top: 20px;
+    margin-top: 10px;
   }
   .auth-description {
-    margin-top: 30px;
     span {
       @include font-style-min(20px, 300, $text-content-header-color);
     }
