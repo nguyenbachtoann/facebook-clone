@@ -8,3 +8,5 @@
 - Firebase Hosting
 - Firebase Google Authentication
 - React Flip Move
+
+Facebook Reaction icon from: [Iconsout](https://iconscout.com/icon-pack/facebook-reactions-emoticons#)

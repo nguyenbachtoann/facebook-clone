@@ -9,8 +9,8 @@ import {
   I_GROUP_FILLED,
   I_GAMING,
   I_GAMING_FILLED,
-} from "../../assets/images/svg";
-import { iconSecondaryColor, btnPrimaryBgColor } from "../../styles/style";
+} from "@toannb/assets/svg-path";
+import { iconSecondaryColor, btnPrimaryBgColor } from "@toannb/styles/js";
 
 export const TEXTS = {
   texSearch: "Search Facebook",

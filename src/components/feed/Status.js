@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Avatar } from "@material-ui/core";
-import { TEXTS, POST_ACTION_INFO } from "./Constants";
-
-const Divider = () => <div className="status__divider divider" />;
+import { TEXTS, POST_ACTION_INFO } from "@toannb/components/feed";
+import { Divider } from "@toannb/common";
 
 const statusIconStyle = (item) => {
   return {
@@ -46,7 +45,7 @@ function Status() {
             </span>
           </label>
         </div>
-        <Divider />
+        <Divider className="status__divider" />
         <div className="status__option-wrapper">
           <div className="status__option-container">
             {POST_ACTION_INFO &&

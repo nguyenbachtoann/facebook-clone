@@ -8,15 +8,16 @@
     .side {
       width: 23%;
       background-color: $app-bg-color;
-      z-index: 2;
+      z-index: 1;
     }
     .feed {
-      width: 51%;
+      width: 100%;
       background-color: $app-bg-color;
     }
     .widget {
       width: 22.7%;
       background-color: $app-bg-color;
+      z-index: 1;
     }
   }
 }

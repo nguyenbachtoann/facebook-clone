@@ -1,5 +1,5 @@
 import React from "react";
-import { I_LOGO_PATH_1, I_LOGO_PATH_2 } from "../../assets/images/svg";
+import { I_LOGO_PATH_1, I_LOGO_PATH_2 } from "@toannb/assets/svg-path";
 
 const defaultStyles = { display: "inline-block", verticalAlign: "middle" };
 

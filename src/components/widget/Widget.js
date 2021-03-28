@@ -5,12 +5,17 @@ import {
   FRIEND_REQUESTS,
   FRIEND_BIRTHDAY,
   TEXTS,
-} from "./Constants";
-import { ONLINE_FRIENDS } from "../feed/Constants";
-import { Option, OptionFriendRequest, OptionBirthday } from "./Option";
-import { StyledTooltip, TooltipInner, popperProps } from "../common";
-
-const Divider = () => <div className="widget__divider divider" />;
+  Option,
+  OptionFriendRequest,
+  OptionBirthday,
+} from "@toannb/components/widget";
+import { ONLINE_FRIENDS } from "@toannb/components/feed";
+import {
+  StyledTooltip,
+  TooltipInner,
+  popperProps,
+  Divider,
+} from "@toannb/common";
 
 function Widget() {
   return (
@@ -38,7 +43,7 @@ function Widget() {
             </div>
           ))}
       </div>
-      <Divider />
+      <Divider className="widget__divider" />
       <div className="widget__friend-request">
         <div className="widget__friend-request-header">
           <span className="friend-request-header__title">
@@ -53,7 +58,7 @@ function Widget() {
             <OptionFriendRequest item={item} key={i} />
           ))}
       </div>
-      <Divider />
+      <Divider className="widget__divider" />
       <div className="widget__birthday">
         <div className="widget__birthday-header">
           <span className="birthday-header__title">{TEXTS.birthdayTitle}</span>
@@ -63,7 +68,7 @@ function Widget() {
             <OptionBirthday item={item} key={i} />
           ))}
       </div>
-      <Divider />
+      <Divider className="widget__divider" />
       <div className="widget__contact">
         <div className="widget__contact-header">
           <span className="contact-header__title">{TEXTS.contactTitle}</span>

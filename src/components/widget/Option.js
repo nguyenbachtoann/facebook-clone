@@ -1,6 +1,6 @@
 import React from "react";
-import { TEXTS } from "./Constants";
-import { OnlineUser } from "../common";
+import { TEXTS } from "@toannb/components/widget";
+import { OnlineUser } from "@toannb/common";
 
 const checkOnlineValue = (value, item) => {
   return value === "online" ? (

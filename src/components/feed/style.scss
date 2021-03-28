@@ -14,14 +14,15 @@
 }
 
 .feed {
-  // top: 56px;
-  left: 24.6%;
+  top: 56px;
   bottom: 0;
-  position: relative;
+  position: fixed;
+
   // -------------
   &__wrapper {
     @include width-height-100;
     @include flex-column;
     align-items: center;
+    overflow-y: auto;
   }
 }

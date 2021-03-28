@@ -1,10 +1,9 @@
 import React, { useContext, useEffect } from "react";
-import { AuthContext } from "../../context";
-import { FACEBOOK_LOGO_TEXT } from "../../assets/images/svg";
-import { firebaseAuth, facebookProvider } from "../../configs";
+import { AuthContext } from "@toannb/context";
+import { FACEBOOK_LOGO_TEXT } from "@toannb/assets/svg-path";
+import { firebaseAuth, facebookProvider } from "@toannb/configs";
 import { makeStyles } from "@material-ui/core/styles";
 import CircularProgress from "@material-ui/core/CircularProgress";
-import Zoom from "@material-ui/core/Zoom";
 import "./style.scss";
 import "./responsiveStyle.scss";
 

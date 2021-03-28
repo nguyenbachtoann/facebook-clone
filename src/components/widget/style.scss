@@ -24,8 +24,8 @@
   position: fixed;
   padding: 16px 14px 6px 9px;
   transition: all 0.3s ease-out;
+  overflow-y: auto;
   &:hover {
-    overflow-y: overlay;
     overflow-x: hidden;
     transition: all 0.1s ease-in;
   }

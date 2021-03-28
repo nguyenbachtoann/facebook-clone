@@ -1,13 +1,13 @@
-import React, { useContext, useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import "./style.scss";
 import {
   SIDE_FOOTER_LINKS,
   SIDE_NAVIGATE_INFO,
   SIDE_SHORTCUT_INFO,
   TEXTS,
-} from "./Constants";
-import { SideOption } from "./SideOption";
-
+  SideOption,
+} from "@toannb/components/side";
+import { Divider } from "@toannb/common";
 const OptionMore = () => (
   <div className="side__navigate-option side__option side__option-more">
     <div className="side__navigate-option-wrapper side__option-wrapper">
@@ -20,8 +20,6 @@ const OptionMore = () => (
     </div>
   </div>
 );
-
-const Divider = () => <div className="side__divider divider" />;
 
 function Side() {
   const [profile, setProfile] = useState(null);
@@ -64,7 +62,7 @@ function Side() {
             ))}
           <OptionMore />
         </div>
-        <Divider />
+        <Divider className="side__divider" />
         <div className="side__shortcut">
           <div className="side__shortcut-header">
             <span className="shortcut-header__title">

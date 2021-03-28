@@ -5,10 +5,10 @@ import {
   TooltipInner,
   StyledTooltip,
   popperProps,
-} from "../common";
-import { TEXTS, ONLINE_FRIENDS } from "./Constants";
-import { I_FS_GO_PREV, I_FS_GO_NEXT } from "../../assets/images/svg";
-import { iconSecondaryColor } from "../../styles/style";
+} from "@toannb/common";
+import { TEXTS, ONLINE_FRIENDS } from "@toannb/components/feed";
+import { I_FS_GO_PREV, I_FS_GO_NEXT } from "@toannb/assets/svg-path";
+import { iconSecondaryColor } from "@toannb/styles/js";
 
 function FriendStatus() {
   const [touchedLeft, setTouchedLeft] = useState(false);

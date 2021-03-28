@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { FEED_STORIES_INFO, TEXTS } from "./Constants";
-import { TooltipInner, StyledTooltip, popperProps } from "../common";
-
-import { Story } from "./Story";
+import { FEED_STORIES_INFO, TEXTS, Story } from "@toannb/components/feed";
+import { TooltipInner, StyledTooltip, popperProps } from "@toannb/common";
 
 function StoryReel() {
   const [avatar, setAvatar] = useState(null);

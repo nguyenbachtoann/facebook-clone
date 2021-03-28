@@ -34,7 +34,7 @@
 }
 .feed {
   &__story-reel {
-    @include width-height(80%, 245px);
+    @include width-height(580px, 245px);
     position: relative;
     &-wrapper {
       @include flex-position(space-between, center);

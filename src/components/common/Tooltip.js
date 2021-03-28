@@ -9,6 +9,8 @@ const StyledTooltip = withStyles({
     margin: "4px 0",
     background: "rgba(0, 0, 0, 0.8)",
     borderRadius: 8,
+    boxShadow:
+      "rgba(0, 0, 0, 0.20) 0px 2px 6px, rgba(0, 0, 0, 0.30) 0px 2px 6px;",
   },
 })(Tooltip);
 

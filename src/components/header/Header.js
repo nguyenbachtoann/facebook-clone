@@ -1,11 +1,15 @@
 import React, { useState, useEffect } from "react";
 import "./style.scss";
-import { I_MESSENGER, I_NOTIFICATION } from "../../assets/images/svg";
-import { Icon, TooltipInner, StyledTooltip, popperProps } from "../common";
-import { LogoIcon } from "./LogoIcon";
 import { Avatar } from "@material-ui/core";
-import { TEXTS, MENU_INFO } from "./Constants";
-import { NotificationBadge, MenuBadge } from "./CustomBadge";
+import { I_MESSENGER, I_NOTIFICATION } from "@toannb/assets/svg-path";
+import { Icon, TooltipInner, StyledTooltip, popperProps } from "@toannb/common";
+import {
+  TEXTS,
+  MENU_INFO,
+  LogoIcon,
+  NotificationBadge,
+  MenuBadge,
+} from "@toannb/components/header";
 
 function Header() {
   const [profile, setProfile] = useState(null);

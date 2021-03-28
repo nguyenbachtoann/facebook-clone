@@ -1,8 +1,12 @@
 import React from "react";
 import { Avatar } from "@material-ui/core";
-import { POSTS } from "./Constants";
-import { StyledTooltip, TooltipInner, popperProps } from "../common";
-
+import { StyledTooltip, TooltipInner, popperProps } from "@toannb/common";
+import { PostEmoji, POSTS } from "@toannb/components/feed";
+import {
+  likePng128,
+  lovePng128,
+  hahaPng128,
+} from "@toannb/assets/reactions-emoticons/png-128";
 const PostItem = ({ post }) => (
   <div className="post__item">
     <div className="post__item-metadata">
@@ -72,6 +76,23 @@ const PostItem = ({ post }) => (
           </div>
         ))}
     </div>
+    <div className="post__interaction-data">
+      <div className="post__data-icons">
+        <div className="post__icon-like"></div>
+        <div className="post__icon-love"></div>
+        <div className="post__icon-haha"></div>
+      </div>
+      <div className="interaction-peoples"></div>
+      <div className="post__interaction-cmt-share"></div>
+    </div>
+    <div className="post__interaction-button">
+      <div className="post__like-button"></div>
+      <div className="post__comment-button"></div>
+      <div className="post__share-button"></div>
+    </div>
+    <div className="post__view-all-comments"></div>
+    <div className="post__comments"></div>
+    <div>{/* <PostEmoji /> */}</div>
   </div>
 );
 

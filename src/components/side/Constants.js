@@ -1,4 +1,4 @@
-import { importAllImgs } from "../../helpers";
+import { importAllImgs } from "@toannb/helpers";
 
 const IMGS = importAllImgs();
 

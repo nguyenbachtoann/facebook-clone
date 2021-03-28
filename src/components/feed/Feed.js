@@ -4,22 +4,17 @@ import "./styleStory.scss";
 import "./styleStatus.scss";
 import "./styleFriendStatus.scss";
 import "./stylePost.scss";
-import { StoryReel } from "./StoryReel";
-import { Status } from "./Status";
-import { FriendStatus } from "./FriendStatus";
-import { Post } from "./Post";
+import { StoryReel, Status, FriendStatus, Post } from "@toannb/components/feed";
 
 function Feed() {
   return (
-    <div className="feed" style={{ paddingBottom: 100 }}>
-      <div
-        className="feed__wrapper"
-        style={{ paddingBottom: 100, width: "100%" }}
-      >
+    <div className="feed">
+      <div className="feed__wrapper">
         <StoryReel />
         <Status />
         <FriendStatus />
         <Post />
+        <div className="pseudo-footer" style={{ marginBottom: 100 }} />
       </div>
     </div>
   );

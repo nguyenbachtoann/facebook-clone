@@ -1,11 +1,18 @@
 import "./App.scss";
 import { useEffect, useContext } from "react";
-import { Header, MENU_INFO, Side, Feed, Widget, Login } from "./components";
-import { AuthContext } from "./context";
+import {
+  Header,
+  MENU_INFO,
+  Side,
+  Feed,
+  Widget,
+  Login,
+} from "@toannb/components";
+import { AuthContext } from "@toannb/context";
 
 function App() {
   const authContext = useContext(AuthContext);
-  const { isLogged, checkAuth, userInfor } = authContext;
+  const { isLogged, checkAuth } = authContext;
   const [HOME] = MENU_INFO;
 
   const getLocalUser = () => {
