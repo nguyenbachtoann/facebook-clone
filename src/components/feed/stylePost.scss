@@ -3,6 +3,11 @@
 @import "./style.scss";
 @import "../widget/style.scss";
 
+@mixin top-0-transition {
+  top: 5px;
+  transition: all 0.2 ease-in;
+}
+
 .feed {
   .post {
     &__item {
@@ -131,6 +136,10 @@
         &-peoples {
           position: absolute;
           left: 80px;
+          &:hover {
+            cursor: pointer;
+            text-decoration: underline;
+          }
         }
         &-comments-shares {
           @include flex-position(flex-end, center);
@@ -139,6 +148,10 @@
           height: 100%;
           span {
             margin-left: 10px;
+            &:hover {
+              cursor: pointer;
+              text-decoration: underline;
+            }
           }
         }
       }
@@ -156,7 +169,6 @@
       .icon-wrapper {
         @include center;
         @include width-height(27px, 27px);
-
         .post__buttons-icon {
           margin-right: 8px;
         }
@@ -166,10 +178,43 @@
         @include hover-background-color-border;
         @include click-change-bg-ease;
         @include center;
+        margin: 0 2px;
         height: 100%;
       }
       .post__buttons-option-like {
         flex: 0.3;
+        &:hover {
+          .post__emoji {
+            bottom: 40px;
+            z-index: 4;
+            opacity: 1;
+            visibility: visible;
+            transition: all 0.12s ease-in;
+            .emoji {
+              &__like {
+                @include top-0-transition;
+              }
+              &__love {
+                @include top-0-transition;
+              }
+              &__care {
+                @include top-0-transition;
+              }
+              &__haha {
+                @include top-0-transition;
+              }
+              &__wow {
+                @include top-0-transition;
+              }
+              &__sad {
+                @include top-0-transition;
+              }
+              &__angry {
+                @include top-0-transition;
+              }
+            }
+          }
+        }
       }
       .post__buttons-option-comment {
         flex: 0.4;
@@ -181,15 +226,14 @@
     &__emoji {
       @include flex-position(flex-start, center);
       @include box-shadow;
+      @include width-height(350px, 50px);
       position: absolute;
-      z-index: 1;
-      width: 350px;
-      height: 50px;
+      bottom: 40px;
+      opacity: 0;
+      visibility: hidden;
+      left: 16px;
       background-color: white;
-      border-top-left-radius: 32px;
-      border-top-right-radius: 32px;
-      border-bottom-left-radius: 32px;
-      border-bottom-right-radius: 32px;
+      @include border-radius-corner(32px);
       img {
         @include width-height(40px, 40px);
         transition: all 0.12s ease-out;
@@ -206,24 +250,38 @@
         }
         &__like {
           left: 5px;
+          top: 10px;
+          transition: all 0.12s ease-out;
         }
         &__love {
           left: 55px;
+          top: 20px;
+          transition: all 0.12s ease-out;
         }
         &__care {
           left: 105px;
+          top: 30px;
+          transition: all 0.12s ease-out;
         }
         &__haha {
           left: 155px;
+          top: 40px;
+          transition: all 0.12s ease-out;
         }
         &__wow {
           left: 205px;
+          top: 50px;
+          transition: all 0.12s ease-out;
         }
         &__sad {
           left: 255px;
+          top: 60px;
+          transition: all 0.12s ease-out;
         }
         &__angry {
           left: 305px;
+          top: 70px;
+          transition: all 0.12s ease-out;
         }
       }
     }
@@ -231,5 +289,5 @@
 }
 
 .divider {
-  margin: 0 16px;
+  margin: 3px 16px;
 }

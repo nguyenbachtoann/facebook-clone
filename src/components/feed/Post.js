@@ -121,16 +121,17 @@ const PostItem = ({ post }) => (
         {POST_ACTION_INFO &&
           POST_ACTION_INFO.map((item, i) => (
             <div
-              className={`post__buttons-option post__buttons-option-${item.wrapClassName}`}
+              className={`post__buttons-option post__buttons-option-${item?.wrapClassName}`}
               key={i}
             >
               <div className="icon-wrapper">
                 <i
-                  className={`post__buttons-option-${item.iconClassName} post__buttons-icon`}
+                  className={`post__buttons-option-${item?.iconClassName} post__buttons-icon`}
                   style={postIconStyle(item)}
                 />
               </div>
-              <span>{item.text}</span>
+              <span>{item?.text}</span>
+              {item?.wrapClassName === "like" && <PostEmoji />}
             </div>
           ))}
       </div>
@@ -139,7 +140,6 @@ const PostItem = ({ post }) => (
     <div className="post__view-all-comments"></div>
     <Divider className="post__divider" />
     <div className="post__comments"></div> */}
-    <div>{/* <PostEmoji /> */}</div>
   </div>
 );
 

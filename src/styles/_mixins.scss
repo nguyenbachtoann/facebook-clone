@@ -115,3 +115,19 @@
     background-color: $bg;
   }
 }
+
+@mixin border-radius-corner($r) {
+  border-top-left-radius: $r;
+  border-top-right-radius: $r;
+  border-bottom-left-radius: $r;
+  border-bottom-right-radius: $r;
+}
+
+@mixin border-radius-top-lr($lr) {
+  border-top-left-radius: $lr;
+  border-top-right-radius: $lr;
+}
+@mixin border-radius-bottom-lr($lr) {
+  border-bottom-left-radius: $lr;
+  border-bottom-right-radius: $lr;
+}

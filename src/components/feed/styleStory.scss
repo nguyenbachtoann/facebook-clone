@@ -24,14 +24,6 @@
   transform: scale(1.03);
   transition: all 0.1s ease-out;
 }
-@mixin border-radius-top-lr($lr) {
-  border-top-left-radius: $lr;
-  border-top-right-radius: $lr;
-}
-@mixin border-radius-bottom-lr($lr) {
-  border-bottom-left-radius: $lr;
-  border-bottom-right-radius: $lr;
-}
 .feed {
   &__story-reel {
     @include width-height(580px, 245px);
