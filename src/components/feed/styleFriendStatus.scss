@@ -4,7 +4,7 @@
 
 .feed {
   &__friend-status {
-    @include width-height(500px, 64px);
+    @include width-height(500px, 40px);
     @include center;
     @include box-shadow;
     margin-top: 18px;
