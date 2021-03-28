@@ -5,7 +5,9 @@ function Story({ item }) {
     <div className="story-reel__item">
       <div
         className="story__item-wrapper"
-        style={{ backgroundImage: `url(${item.storyMedia})` }}
+        style={{
+          backgroundImage: `url(${item.storyMedia})`,
+        }}
       />
       <div
         className="story__item-avatar"

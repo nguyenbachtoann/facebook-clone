@@ -51,7 +51,7 @@ function Login() {
     <div className="login">
       <div className="login__container">
         <div className="login__logo">
-          <img src={FACEBOOK_LOGO_TEXT} alt="facebook logo" />
+          <img src={FACEBOOK_LOGO_TEXT} alt="facebook logo" loading="lazy" />
         </div>
         <div className="login__description">
           <span>Feel free to login</span>

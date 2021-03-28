@@ -14,7 +14,7 @@
       border-radius: 8px;
       background-color: white;
       position: relative;
-      padding-bottom: 18px;
+      padding-bottom: 3px;
       &-metadata {
         @include width-height(500px, auto);
         @include flex-position(flex-start, unset);
@@ -58,7 +58,11 @@
 
     &__actions {
       @include center;
-      @include font-style-min(1.2rem, 800, $text-content-header-color);
+      @include font-style-min(
+        $text-title-size,
+        800,
+        $text-content-header-color
+      );
       flex: 0.1;
       &-dots {
         // hover
@@ -83,8 +87,97 @@
     }
 
     &__interaction-data {
+      @include width-height(100%, 42px);
+      @include flex-position(flex-start, center);
+      @include font-style-min(
+        $text-content-secondary-size,
+        400,
+        $text-content-header-color
+      );
+      position: relative;
+
+      .post__data {
+        &-icons {
+          @include flex-position(flex-start, center);
+          padding-left: 16px;
+          flex: 0.4;
+          height: 100%;
+          img {
+            @include width-height(18px, 18px);
+          }
+          .post {
+            &__icon {
+              @include center;
+              position: absolute;
+              border: 2px solid white;
+              border-radius: 50%;
+              &:hover {
+                cursor: pointer;
+              }
+              &-like {
+                z-index: 3;
+              }
+              &-love {
+                left: 34px;
+                z-index: 2;
+              }
+              &-haha {
+                left: 52px;
+              }
+            }
+          }
+        }
+
+        &-peoples {
+          position: absolute;
+          left: 80px;
+        }
+        &-comments-shares {
+          @include flex-position(flex-end, center);
+          padding-right: 16px;
+          flex: 0.6;
+          height: 100%;
+          span {
+            margin-left: 10px;
+          }
+        }
+      }
     }
 
+    &__interaction-buttons {
+      @include width-height(100%, 59px);
+      @include center;
+      .post__buttons-container {
+        @include width-height(95%, 85%);
+        @include flex-position(space-around, center);
+      }
+      height: 40px;
+      @include font-style-min($text-content-size, 600, $text-info-gray);
+      .icon-wrapper {
+        @include center;
+        @include width-height(27px, 27px);
+
+        .post__buttons-icon {
+          margin-right: 8px;
+        }
+        @include secondary-icon-filter;
+      }
+      .post__buttons-option {
+        @include hover-background-color-border;
+        @include click-change-bg-ease;
+        @include center;
+        height: 100%;
+      }
+      .post__buttons-option-like {
+        flex: 0.3;
+      }
+      .post__buttons-option-comment {
+        flex: 0.4;
+      }
+      .post__buttons-option-share {
+        flex: 0.3;
+      }
+    }
     &__emoji {
       @include flex-position(flex-start, center);
       @include box-shadow;
@@ -135,4 +228,8 @@
       }
     }
   }
+}
+
+.divider {
+  margin: 0 16px;
 }

@@ -59,7 +59,6 @@ function Header() {
     <div id="header">
       <div className="header-left">
         <LogoIcon />
-        {/* <img className="header-left__logo" src={logo} alt="Header Logo" /> */}
         <div className="header-left__search">
           <label className="header-left__label">
             <div className="header-left__search-history" />

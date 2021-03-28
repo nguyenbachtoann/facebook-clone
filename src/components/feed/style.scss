@@ -15,8 +15,7 @@
 
 .feed {
   top: 56px;
-  bottom: 0;
-  position: fixed;
+  position: sticky;
 
   // -------------
   &__wrapper {

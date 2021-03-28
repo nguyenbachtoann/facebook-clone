@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Avatar } from "@material-ui/core";
-import { TEXTS, POST_ACTION_INFO } from "@toannb/components/feed";
+import { TEXTS, POST_STATUS_ACTION_INFO } from "@toannb/components/feed";
 import { Divider } from "@toannb/common";
 
 const statusIconStyle = (item) => {
@@ -26,6 +26,7 @@ function Status() {
   useEffect(() => {
     handleGetUser();
   }, []);
+
   return (
     <div className="feed__status">
       <div className="feed__status-wrapper">
@@ -48,8 +49,8 @@ function Status() {
         <Divider className="status__divider" />
         <div className="status__option-wrapper">
           <div className="status__option-container">
-            {POST_ACTION_INFO &&
-              POST_ACTION_INFO.map((item, i) => (
+            {POST_STATUS_ACTION_INFO &&
+              POST_STATUS_ACTION_INFO.map((item, i) => (
                 <div
                   className={`status__option status__option-${item.wrapClassName}`}
                   key={i}

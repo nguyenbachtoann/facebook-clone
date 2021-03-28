@@ -42,7 +42,7 @@ export const SIDE_NAVIGATE_INFO = [
     class: "groups",
     path: "/groups",
     text: "Groups",
-    extraText: "9+ new groups",
+    extraText: "9+ new",
   },
 ];
 

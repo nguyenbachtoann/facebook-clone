@@ -11,6 +11,9 @@ export const TEXTS = {
   statusPlaceHolder: "What's on your mind, ",
   friendStatusCreateMeeting: "Create Room",
   friendStatusSendGreeting: "Say Hi",
+  postLikeBtn: "Like",
+  postCommentBtn: "Comment",
+  postShareBtn: "Share",
 };
 
 export const FEED_STORIES_INFO = [
@@ -36,7 +39,7 @@ export const FEED_STORIES_INFO = [
   },
 ];
 
-export const POST_ACTION_INFO = [
+export const POST_STATUS_ACTION_INFO = [
   {
     size: 24,
     icon: IMGS[`static-setting-3.png`].default,
@@ -205,6 +208,11 @@ export const POSTS = [
         ],
       },
     ],
+    interactions: {
+      peoples: "120k",
+      comments: "100k Comments",
+      shares: "50k Shares",
+    },
   },
   {
     id: 2,
@@ -231,5 +239,37 @@ export const POSTS = [
         ],
       },
     ],
+    interactions: {
+      peoples: "60k",
+      comments: "10k Comments",
+      shares: "5k Shares",
+    },
+  },
+];
+
+export const POST_ACTION_INFO = [
+  {
+    size: 18,
+    icon: IMGS[`static-setting-8.png`].default,
+    iconPosition: "-38px -190px",
+    wrapClassName: "like",
+    iconClassName: "like-icon",
+    text: "Like",
+  },
+  {
+    size: 18,
+    icon: IMGS[`static-setting-8.png`].default,
+    iconPosition: "0 -190px",
+    wrapClassName: "comment",
+    iconClassName: "comment-icon",
+    text: "Comment",
+  },
+  {
+    size: 18,
+    icon: IMGS[`static-setting-8.png`].default,
+    iconPosition: "0 -209px",
+    wrapClassName: "share",
+    iconClassName: "share-icon",
+    text: "Share",
   },
 ];

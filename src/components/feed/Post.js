@@ -1,12 +1,29 @@
 import React from "react";
 import { Avatar } from "@material-ui/core";
-import { StyledTooltip, TooltipInner, popperProps } from "@toannb/common";
-import { PostEmoji, POSTS } from "@toannb/components/feed";
 import {
-  likePng128,
-  lovePng128,
-  hahaPng128,
-} from "@toannb/assets/reactions-emoticons/png-128";
+  StyledTooltip,
+  TooltipInner,
+  popperProps,
+  Divider,
+} from "@toannb/common";
+import { PostEmoji, POSTS, POST_ACTION_INFO } from "@toannb/components/feed";
+import {
+  likePng256,
+  lovePng256,
+  hahaPng256,
+} from "@toannb/assets/reactions-emoticons/png-256";
+
+const postIconStyle = (item) => {
+  return {
+    backgroundImage: `url(${item.icon})`,
+    backgroundPosition: item.iconPosition,
+    backgroundSize: "73px 361px",
+    backgroundRepeat: "no-repeat",
+    display: "inline-block",
+    width: item.size,
+    height: item.size,
+  };
+};
 const PostItem = ({ post }) => (
   <div className="post__item">
     <div className="post__item-metadata">
@@ -70,7 +87,7 @@ const PostItem = ({ post }) => (
             {d?.type === "image" &&
               d?.data?.map((b, k) => (
                 <div className="post__images" key={`image-${k}`}>
-                  <img src={b.src} alt={b.alt} />
+                  <img src={b.src} alt={b.alt} loading="lazy" />
                 </div>
               ))}
           </div>
@@ -78,20 +95,50 @@ const PostItem = ({ post }) => (
     </div>
     <div className="post__interaction-data">
       <div className="post__data-icons">
-        <div className="post__icon-like"></div>
-        <div className="post__icon-love"></div>
-        <div className="post__icon-haha"></div>
+        <div className="post__icon-like post__icon">
+          <img src={likePng256} alt="data like" loading="lazy" />
+        </div>
+        <div className="post__icon-love post__icon">
+          <img src={lovePng256} alt="data love" loading="lazy" />
+        </div>
+        <div className="post__icon-haha post__icon">
+          <img src={hahaPng256} alt="data haha" loading="lazy" />
+        </div>
+        <span className="post__data-peoples">
+          {post?.interactions?.peoples}
+        </span>
       </div>
-      <div className="interaction-peoples"></div>
-      <div className="post__interaction-cmt-share"></div>
+      <div className="post__data-comments-shares">
+        <span className="post__data-comments">
+          {post?.interactions?.comments}
+        </span>
+        <span className="post__data-shares">{post?.interactions?.shares}</span>
+      </div>
     </div>
-    <div className="post__interaction-button">
-      <div className="post__like-button"></div>
-      <div className="post__comment-button"></div>
-      <div className="post__share-button"></div>
+    <Divider className="post__divider" />
+    <div className="post__interaction-buttons">
+      <div className="post__buttons-container">
+        {POST_ACTION_INFO &&
+          POST_ACTION_INFO.map((item, i) => (
+            <div
+              className={`post__buttons-option post__buttons-option-${item.wrapClassName}`}
+              key={i}
+            >
+              <div className="icon-wrapper">
+                <i
+                  className={`post__buttons-option-${item.iconClassName} post__buttons-icon`}
+                  style={postIconStyle(item)}
+                />
+              </div>
+              <span>{item.text}</span>
+            </div>
+          ))}
+      </div>
     </div>
+    {/* <Divider className="post__divider" />
     <div className="post__view-all-comments"></div>
-    <div className="post__comments"></div>
+    <Divider className="post__divider" />
+    <div className="post__comments"></div> */}
     <div>{/* <PostEmoji /> */}</div>
   </div>
 );

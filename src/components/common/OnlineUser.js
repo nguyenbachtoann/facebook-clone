@@ -34,6 +34,7 @@ function OnlineUser({ src, size, className, title, style }) {
           alt={title}
           style={{ ...wrapper(size), ...style }}
           className="online-user-avatar"
+          loading="lazy"
         />
         <span style={{ ...online(size) }} />
       </div>
