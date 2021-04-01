@@ -4,7 +4,12 @@ import { OnlineUser } from "@toannb/common";
 
 const checkOnlineValue = (value, item) => {
   return value === "online" ? (
-    <OnlineUser className={`online-user-wrapper`} src={item?.icon} size={30} />
+    <OnlineUser
+      className={`online-user-wrapper`}
+      src={item?.icon}
+      size={30}
+      title={item?.text}
+    />
   ) : (
     <img
       className={`widget__option-icon widget-icon-${item?.iconClass}`}

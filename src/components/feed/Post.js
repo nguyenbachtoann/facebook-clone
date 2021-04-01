@@ -96,13 +96,13 @@ const PostItem = ({ post }) => (
     <div className="post__interaction-data">
       <div className="post__data-icons">
         <div className="post__icon-like post__icon">
-          <img src={likePng256} alt="data like" loading="lazy" />
+          <img src={likePng256} alt="data post like icon" loading="lazy" />
         </div>
         <div className="post__icon-love post__icon">
-          <img src={lovePng256} alt="data love" loading="lazy" />
+          <img src={lovePng256} alt="data post love icon" loading="lazy" />
         </div>
         <div className="post__icon-haha post__icon">
-          <img src={hahaPng256} alt="data haha" loading="lazy" />
+          <img src={hahaPng256} alt="data post haha icon" loading="lazy" />
         </div>
         <span className="post__data-peoples">
           {post?.interactions?.peoples}

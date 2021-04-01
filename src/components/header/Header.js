@@ -114,7 +114,7 @@ function Header() {
           <div className="header-right__avatar-container">
             <Avatar
               src={profile && profile.picture.data.url}
-              alt="Avatar"
+              alt="user avatar"
               className="header-right__avatar-img"
             />
             <span>{profile && profile.first_name}</span>

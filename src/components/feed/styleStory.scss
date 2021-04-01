@@ -1,7 +1,6 @@
 @import "../../styles/variables";
 @import "../../styles/mixins";
 @import "./style.scss";
-
 @mixin story-bg-media {
   background-repeat: no-repeat;
   background-size: cover;
@@ -127,6 +126,177 @@
         .story__go-btn-icon {
           @include option-btn-png($imgSetting1, 0, -168px, 25px, 1002px);
           @include secondary-icon-filter;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1218px) and (max-width: 1242px) {
+  .feed {
+    &__story-reel {
+      @include width-height(530px, 235px);
+      .story-reel {
+        &__item {
+          @include width-height(100px, 180px);
+        }
+        &__item-owner {
+          .story__item-owner {
+            @include width-height(100px, 180px);
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1199px) and (max-width: 1218px) {
+  .feed {
+    &__story-reel {
+      @include width-height(560px, 230px);
+      .story-reel {
+        &__item {
+          @include width-height(105px, 180px);
+        }
+        &__item-owner {
+          .story__item-owner {
+            @include width-height(105px, 180px);
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (min-width: 1187px) and (max-width: 1199px) {
+  .feed {
+    &__story-reel {
+      @include width-height(530px, 230px);
+      .story-reel {
+        &__item {
+          @include width-height(100px, 180px);
+        }
+        &__item-owner {
+          .story__item-owner {
+            @include width-height(100px, 180px);
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (min-width: 1139px) and (max-width: 1186px) {
+  .feed {
+    &__story-reel {
+      @include width-height(530px, 270px);
+      .story-reel {
+        &__item {
+          @include width-height(127px, 220px);
+        }
+        &__item-owner {
+          .story__item-owner {
+            @include width-height(127px, 220px);
+          }
+        }
+      }
+      .last-story-item {
+        display: none;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1111px) and (max-width: 1139px) {
+  .feed {
+    &__story-reel {
+      @include width-height(515px, 270px);
+      .story-reel {
+        &__item {
+          @include width-height(125px, 210px);
+        }
+        &__item-owner {
+          .story__item-owner {
+            @include width-height(125px, 210px);
+          }
+        }
+      }
+      .last-story-item {
+        display: none;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1078px) and (max-width: 1110px) {
+  .feed {
+    &__story-reel {
+      @include width-height(500px, 260px);
+      .story-reel {
+        &__item {
+          @include width-height(118px, 210px);
+        }
+        &__item-owner {
+          .story__item-owner {
+            @include width-height(118px, 210px);
+          }
+        }
+      }
+      .last-story-item {
+        display: none;
+      }
+    }
+  }
+}
+@media screen and (max-width: 1077px) {
+  .feed {
+    &__story-reel {
+      @include width-height(580px, 245px);
+      .story-reel {
+        &__item {
+          @include width-height(111px, 200px);
+        }
+        &__item-owner {
+          .story__item-owner {
+            @include width-height(111px, 200px);
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 900px) and (max-width: 930px) {
+  .feed {
+    &__story-reel {
+      @include width-height(500px, 260px);
+      .story-reel {
+        &__item {
+          @include width-height(120px, 210px);
+        }
+        &__item-owner {
+          .story__item-owner {
+            @include width-height(120px, 210px);
+          }
+        }
+      }
+      .last-story-item {
+        display: none;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 899px) {
+  .feed {
+    &__story-reel {
+      @include width-height(580px, 240px);
+      .story-reel {
+        &__item {
+          @include width-height(111px, 200px);
+        }
+        &__item-owner {
+          .story__item-owner {
+            @include width-height(111px, 200px);
+          }
         }
       }
     }

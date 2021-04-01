@@ -22,7 +22,7 @@
   left: 75.6%;
   bottom: 0;
   position: fixed;
-  padding: 16px 14px 6px 9px;
+  padding: 16px 14px 6px 0px;
   transition: all 0.3s ease-out;
   overflow-y: auto;
   &:hover {
@@ -319,5 +319,16 @@
         }
       }
     }
+  }
+}
+
+@media screen and (max-width: 1077px) {
+  .widget {
+    left: 69%;
+  }
+}
+@media screen and(max-width: 938px) {
+  .widget {
+    left: 69%;
   }
 }

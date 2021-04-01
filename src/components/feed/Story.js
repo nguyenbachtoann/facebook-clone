@@ -1,8 +1,8 @@
 import React from "react";
 
-function Story({ item }) {
+function Story({ item, className }) {
   return (
-    <div className="story-reel__item">
+    <div className={`story-reel__item ${className}`}>
       <div
         className="story__item-wrapper"
         style={{

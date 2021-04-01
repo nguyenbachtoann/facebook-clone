@@ -5,7 +5,7 @@ import { firebaseAuth, facebookProvider } from "@toannb/configs";
 import { makeStyles } from "@material-ui/core/styles";
 import CircularProgress from "@material-ui/core/CircularProgress";
 import "./style.scss";
-import "./responsiveStyle.scss";
+import "./styleResponsive.scss";
 
 const useStylesFacebook = makeStyles((theme) => ({
   root: {

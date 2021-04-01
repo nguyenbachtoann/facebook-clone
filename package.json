@@ -1,5 +1,7 @@
 {
   "name": "facebook-clone",
+  "author": "Nguyen Bach Toan",
+  "description": "A clone of Facebook fo fun.",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -10,6 +12,7 @@
     "@testing-library/user-event": "^12.7.1",
     "axios": "^0.21.1",
     "firebase": "^8.2.10",
+    "html-webpack-plugin": "^5.3.1",
     "node-sass": "^5.0.0",
     "react": "^17.0.1",
     "react-app-rewired": "^2.1.8",

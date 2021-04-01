@@ -28,7 +28,7 @@ function StoryReel() {
           </div>
         </div>
         {FEED_STORIES_INFO &&
-          FEED_STORIES_INFO.map((item, i) => <Story item={item} key={i} />)}
+          FEED_STORIES_INFO.map((item, i) => <Story item={item} key={i} className={i === FEED_STORIES_INFO.length - 1 && "last-story-item"}/>)}
         <StyledTooltip
           title={TooltipInner(TEXTS.storyGo)}
           PopperProps={popperProps}

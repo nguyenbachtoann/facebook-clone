@@ -31,3 +31,31 @@ a {
   color: inherit;
   text-decoration: none;
 }
+@media screen and (max-width: 1077px) {
+  #app {
+    &__body {
+      .side {
+        display: none;
+      }
+      .feed {
+        width: 70%;
+      }
+      .widget {
+        width: 30%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 899px) {
+  #app {
+    &__body {
+      .feed {
+        width: 100%;
+      }
+      .widget {
+        display: none;
+      }
+    }
+  }
+}

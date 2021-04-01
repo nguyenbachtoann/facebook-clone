@@ -12,25 +12,25 @@ function PostEmoji() {
   return (
     <div className="post__emoji">
       <div className="emoji__like emoji__image-container">
-        <img src={likePng128} alt="reaction like" loading="lazy" />
+        <img src={likePng128} alt="reaction like icon" loading="lazy" />
       </div>
       <div className="emoji__love emoji__image-container">
-        <img src={lovePng128} alt="reaction love" loading="lazy" />
+        <img src={lovePng128} alt="reaction love icon" loading="lazy" />
       </div>
       <div className="emoji__care emoji__image-container">
-        <img src={carePng128} alt="reaction care" loading="lazy" />
+        <img src={carePng128} alt="reaction care icon" loading="lazy" />
       </div>
       <div className="emoji__haha emoji__image-container">
-        <img src={hahaPng128} alt="reaction haha" loading="lazy" />
+        <img src={hahaPng128} alt="reaction haha icon" loading="lazy" />
       </div>
       <div className="emoji__wow emoji__image-container">
-        <img src={wowPng128} alt="reaction wow" loading="lazy" />
+        <img src={wowPng128} alt="reaction wow icon" loading="lazy" />
       </div>
       <div className="emoji__sad emoji__image-container">
-        <img src={sadPng128} alt="reaction sad" loading="lazy" />
+        <img src={sadPng128} alt="reaction sad icon" loading="lazy" />
       </div>
       <div className="emoji__angry emoji__image-container">
-        <img src={angryPng128} alt="reaction angry" loading="lazy" />
+        <img src={angryPng128} alt="reaction angry icon" loading="lazy" />
       </div>
     </div>
   );

@@ -57,6 +57,7 @@ function FriendStatus() {
                   className="online-user-wrapper"
                   src={item.icon}
                   size={40}
+                  title={`online friend - ${item.text}`}
                 />
               </div>
             </StyledTooltip>

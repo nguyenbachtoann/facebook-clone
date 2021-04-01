@@ -46,6 +46,7 @@
         @include secondary-icon-filter;
         pointer-events: none;
         margin: 0 8px 0 12px;
+        transition: all 1s ease-out;
       }
     }
     &__label {
@@ -54,6 +55,7 @@
       height: 40px;
       background-color: $comment-bg-color;
       border-radius: 50px;
+      transition: all 1s ease-out;
     }
 
     &__field {
@@ -168,6 +170,32 @@
       }
       &-icon {
         @include option-btn-png($imgSetting2, 0, -251px, 33px, 510px);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1260px) {
+  #header {
+    .header-left {
+      &__search {
+        &-icon {
+          transition: all 0.2s ease-in;
+          margin: 0 8px 0 8px;
+        }
+      }
+      &__label {
+        transition: all 0.2s ease-in;
+        @include width-height(40px, 40px);
+      }
+      &__field {
+        display: none;
+      }
+    }
+
+    .header-right {
+      &__avatar {
+        display: none;
       }
     }
   }

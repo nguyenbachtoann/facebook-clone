@@ -29,18 +29,20 @@ function App() {
   }, [HOME, checkAuth]);
   return (
     <div className="app">
-      {isLogged ? (
-        <>
-          <Header />
-          <div id="app__body">
-            <Side />
-            <Feed />
-            <Widget />
-          </div>
-        </>
-      ) : getLocalUser() ? null : (
-        <Login />
-      )}
+      <main>
+        {isLogged ? (
+          <>
+            <Header />
+            <div id="app__body">
+              <Side />
+              <Feed />
+              <Widget />
+            </div>
+          </>
+        ) : getLocalUser() ? null : (
+          <Login />
+        )}
+      </main>
     </div>
   );
 }
