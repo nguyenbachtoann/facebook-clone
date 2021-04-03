@@ -1,3 +1,5 @@
+A fun project.
+
 # What I am using in this project
 
 - React Hooks
@@ -7,6 +9,7 @@
 - Firebase's Firestore realtime DB
 - Firebase Hosting
 - Firebase Google Authentication
-- React Flip Move
 
 Facebook Reaction icon from: [Iconsout](https://iconscout.com/icon-pack/facebook-reactions-emoticons#)
+
+Hosted link: [Facebook Clone](https://facebook-clone-7726f.web.app/)
